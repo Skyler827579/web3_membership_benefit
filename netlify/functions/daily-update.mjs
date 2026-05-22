@@ -32,13 +32,39 @@ async function generateMarketArticle() {
   };
 }
 
+function fallbackArticle() {
+  const date = new Date().toISOString().slice(0, 10);
+  return {
+    id: `daily-${date}`,
+    date,
+    title: `Crypto Daily｜${date} 市场观察`,
+    summary: "今日行情文章已生成。行情接口暂时不可用时，本页会先给出学习型市场观察，后续自动更新会继续补充实时数据。",
+    rows: [],
+    paragraphs: [
+      "今天的观察重点是保持对市场结构的敏感，而不是把单日涨跌当成结论。",
+      "对于新进入 Web3 的学习者，每日文章更重要的作用是训练观察框架：先看 BTC 和 ETH 的方向，再看高 beta 资产是否跟随，最后再判断具体赛道是否出现资金轮动。",
+      "如果市场短期快速上涨，要警惕追高和杠杆；如果市场快速下跌，要优先确认自己的仓位、钱包安全和流动性需求。",
+      "ChainPulse 会把每日行情内容沉淀成文章，帮助成员形成长期可复用的市场观察习惯。"
+    ],
+    createdAt: new Date().toISOString()
+  };
+}
+
+async function generateArticleSafely() {
+  try {
+    return await generateMarketArticle();
+  } catch {
+    return fallbackArticle();
+  }
+}
+
 export async function handler() {
   const siteID = process.env.NETLIFY_SITE_ID || process.env.SITE_ID;
   const token = process.env.NETLIFY_AUTH_TOKEN || process.env.NETLIFY_TOKEN;
   const store = siteID && token ? getStore({ name: "chainpulse-db", siteID, token }) : getStore("chainpulse-db");
   const db = await store.get("db", { type: "json" });
   if (!db) return { statusCode: 404, body: "db not initialized" };
-  const article = await generateMarketArticle();
+  const article = await generateArticleSafely();
   db.articles = (db.articles || []).filter(item => item.id !== article.id);
   db.articles.unshift(article);
   await store.setJSON("db", db);

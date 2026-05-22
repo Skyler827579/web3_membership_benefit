@@ -6,7 +6,10 @@ import { getStore } from "@netlify/blobs";
 function bundledFile(name) {
   const candidates = [
     path.join(process.env.LAMBDA_TASK_ROOT || "", "netlify", "functions", "data", name),
+    path.join(process.env.LAMBDA_TASK_ROOT || "", "data", name),
+    path.join(process.env.LAMBDA_TASK_ROOT || "", "protected", "content", name),
     path.join(process.cwd(), "netlify", "functions", "data", name),
+    path.join(process.cwd(), "protected", "content", name),
     path.join(process.cwd(), "data", name)
   ];
   const found = candidates.find(file => file && fs.existsSync(file));
@@ -131,6 +134,32 @@ async function generateMarketArticle() {
   };
 }
 
+function fallbackArticle() {
+  const date = new Date().toISOString().slice(0, 10);
+  return {
+    id: `daily-${date}`,
+    date,
+    title: `Crypto Daily｜${date} 市场观察`,
+    summary: "今日行情文章已生成。行情接口暂时不可用时，本页会先给出学习型市场观察，后续自动更新会继续补充实时数据。",
+    rows: [],
+    paragraphs: [
+      "今天的观察重点是保持对市场结构的敏感，而不是把单日涨跌当成结论。Web3 市场波动大，短期价格通常同时受到宏观流动性、主流资产强弱、叙事热度和链上资金流影响。",
+      "对于新进入 Web3 的学习者，每日文章更重要的作用是训练观察框架：先看 BTC 和 ETH 的方向，再看高 beta 资产是否跟随，最后再判断具体赛道是否出现资金轮动。",
+      "如果市场短期快速上涨，要警惕追高和杠杆；如果市场快速下跌，要优先确认自己的仓位、钱包安全和流动性需求。学习阶段最重要的是活下来，而不是猜中每一次波动。",
+      "ChainPulse 会把每日行情内容沉淀成文章，帮助成员形成长期可复用的市场观察习惯。"
+    ],
+    createdAt: new Date().toISOString()
+  };
+}
+
+async function generateArticleSafely() {
+  try {
+    return await generateMarketArticle();
+  } catch {
+    return fallbackArticle();
+  }
+}
+
 export async function handler(event) {
   try {
     const method = event.httpMethod;
@@ -189,6 +218,11 @@ export async function handler(event) {
 
     if (method === "GET" && pathname === "/articles") {
       if (!paidOrderByToken(db, query.token)) return json(403, { error: "尚未解锁，请先完成付款并等待后台确认" });
+      if (!db.articles?.length) {
+        const article = await generateArticleSafely();
+        db.articles = [article];
+        await writeDb(db);
+      }
       return json(200, { articles: db.articles || [] });
     }
 
@@ -226,7 +260,7 @@ export async function handler(event) {
         return json(200, { order });
       }
       if (method === "POST" && pathname === "/admin/articles/generate") {
-        const article = await generateMarketArticle();
+        const article = await generateArticleSafely();
         db.articles = (db.articles || []).filter(item => item.id !== article.id);
         db.articles.unshift(article);
         await writeDb(db);
