@@ -69,6 +69,10 @@ function wechatQr(db) {
   return process.env.WECHAT_QR_PATH || db.settings.wechatQr;
 }
 
+function redeemLockedMessage() {
+  return "这个邀请码已经被使用。请使用付款后保存的会员入口，或联系管理员重新发送访问链接。";
+}
+
 function publicProduct(product) {
   return {
     id: product.id,
@@ -160,6 +164,7 @@ async function handleApi(req, res) {
     if (!invite || invite.productId !== productId || invite.status !== "active") {
       return send(res, 400, { error: "邀请码无效，或不适用于当前资料" });
     }
+    if (invite.usedAt) return send(res, 409, { error: redeemLockedMessage() });
 
     let order = db.orders.find(item => item.inviteCode === invite.code && item.productId === productId);
     if (!order) {
@@ -174,6 +179,7 @@ async function handleApi(req, res) {
       };
       db.orders.unshift(order);
       invite.usedAt = new Date().toISOString();
+      invite.status = "used";
       writeDb(db);
     }
 

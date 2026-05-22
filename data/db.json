@@ -1,7 +1,7 @@
 {
   "settings": {
     "adminPassword": "admin123",
-    "wechatQr": "/assets/wechat-qr-placeholder.svg"
+    "wechatQr": "/assets/wechat-pay.jpg"
   },
   "products": [
     {

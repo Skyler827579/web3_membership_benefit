@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Web3 资料库</title>
+    <title>ChainPulse 社群权益</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
@@ -11,29 +11,59 @@
       <section class="topbar">
         <div>
           <img class="brand-logo" src="/assets/chainpulse-logo.svg" alt="ChainPulse" />
-          <div class="eyebrow">Web3 Knowledge Library</div>
-          <h1>Web3 破局之路资料库</h1>
+          <div class="eyebrow">ChainPulse Membership</div>
+          <h1>ChainPulse Web3 社群权益</h1>
         </div>
         <a class="admin-link" href="/admin.html">后台</a>
       </section>
 
-      <section class="layout">
+      <section class="poster-hero">
+        <div class="poster-copy">
+          <div class="status-pill">入场门槛 · ¥20</div>
+          <h2>一个入口，持续获得 Web3 学习、行情文章和上海社群资源</h2>
+          <p>ChainPulse 面向 Web3 新人和长期学习者，提供可随时查询的基础知识库、每日行情文章更新，以及上海 Web3 社群连接入口。</p>
+        </div>
+        <div class="poster-price">
+          <strong>¥20</strong>
+          <span>解锁会员入口</span>
+        </div>
+      </section>
+
+      <section class="benefit-grid">
+        <article>
+          <span>01</span>
+          <h3>基础知识库</h3>
+          <p>把 Web3 底层逻辑、钱包安全、链上工具、DeFi、NFT、赛道与周期内容整理成网页资料，后续可随时回到网站查询。</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>每日行情文章</h3>
+          <p>每日更新市场观察，以文章形式呈现主流资产价格、24小时变化、相对强弱和风险提示，不做口播稿展示。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>社群与上海资源</h3>
+          <p>获得 ChainPulse 社群入口，连接上海 Web3 活动、学习伙伴、行业交流和线下资源。</p>
+        </article>
+      </section>
+
+      <section class="layout access-layout">
         <article class="product-panel">
-          <div class="status-pill">第一档资料 · ¥20</div>
-          <h2 id="productTitle">Web3破局之路｜完整版资料</h2>
-          <p id="productDesc">付费后解锁 ChainPulse 每日行情文章、Web3 基础学习内容、社群入口与上海 Web3 社群资源。</p>
+          <div class="status-pill">ChainPulse 会员入口</div>
+          <h2 id="productTitle">ChainPulse Web3 社群权益</h2>
+          <p id="productDesc">解锁后可反复进入会员中心，查看基础学习内容、每日行情文章和社群资源说明。</p>
           <div class="info-grid">
             <div>
-              <strong>资料形式</strong>
-              <span>网页阅读</span>
+              <strong>学习资料</strong>
+              <span>随时查询</span>
             </div>
             <div>
-              <strong>当前价格</strong>
+              <strong>入场门槛</strong>
               <span id="priceText">¥20</span>
             </div>
             <div>
-              <strong>解锁方式</strong>
-              <span>邀请码 + 微信付款</span>
+              <strong>访问方式</strong>
+              <span>一次解锁，多次阅读</span>
             </div>
           </div>
         </article>
@@ -41,7 +71,7 @@
         <article class="access-panel">
           <div id="stepInvite" class="step active">
             <h3>输入邀请码</h3>
-            <p>邀请码验证通过后，会显示微信付款二维码。付款后等待后台确认，即可打开资料。</p>
+            <p>邀请码只用于创建一次付款订单。付款确认后，当前浏览器会保存会员入口，也可以收藏解锁后的链接反复访问。</p>
             <label for="inviteInput">邀请码</label>
             <div class="inline-form">
               <input id="inviteInput" placeholder="例如 WEB3-ABCD1234" autocomplete="off" />
@@ -54,7 +84,7 @@
             <div class="step-head">
               <div>
                 <h3>微信付款</h3>
-                <p>请支付 <strong id="payAmount">¥20</strong>，付款后由后台确认解锁。</p>
+                <p>请支付 <strong id="payAmount">¥20</strong>，付款后由后台确认会员入口。</p>
               </div>
               <span id="orderStatus" class="status waiting">待付款</span>
             </div>
@@ -71,8 +101,8 @@
 
           <div id="stepUnlocked" class="step">
             <h3>资料已解锁</h3>
-            <p>付款已确认，可以在网页里阅读完整资料。</p>
-            <a id="readerLink" class="download-btn" target="_blank" rel="noreferrer">进入在线阅读</a>
+            <p>付款已确认，可以进入 ChainPulse 会员中心。建议收藏打开后的页面。</p>
+            <a id="readerLink" class="download-btn" target="_blank" rel="noreferrer">进入会员中心</a>
           </div>
         </article>
       </section>

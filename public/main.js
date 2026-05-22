@@ -1,5 +1,5 @@
 let productId = "web3-64";
-let currentOrderId = null;
+let currentOrderId = localStorage.getItem("chainpulseOrderId") || null;
 
 const $ = id => document.getElementById(id);
 
@@ -26,11 +26,17 @@ async function loadProducts() {
   const data = await api("/api/products");
   const product = data.products[0];
   productId = product.id;
-  $("productTitle").textContent = product.title;
-  $("productDesc").textContent = product.description;
+  $("productTitle").textContent = "ChainPulse Web3 社群权益";
+  $("productDesc").textContent = "解锁后可反复进入会员中心，查看基础学习内容、每日行情文章和社群资源说明。";
   $("priceText").textContent = `¥${product.price}`;
   $("payAmount").textContent = `¥${product.price}`;
   $("wechatQr").src = data.wechatQr;
+  const savedToken = localStorage.getItem("chainpulseUnlockToken");
+  if (savedToken) unlock(savedToken);
+  else if (currentOrderId) {
+    $("orderCode").textContent = `订单号：${currentOrderId}`;
+    showStep("stepPay");
+  }
 }
 
 async function redeemInvite() {
@@ -44,6 +50,7 @@ async function redeemInvite() {
       body: JSON.stringify({ code, productId })
     });
     currentOrderId = data.order.id;
+    localStorage.setItem("chainpulseOrderId", currentOrderId);
     $("wechatQr").src = data.wechatQr;
     $("payAmount").textContent = `¥${data.order.amount}`;
     $("orderCode").textContent = `请备注邀请码：${code}；订单号：${data.order.id}`;
@@ -78,6 +85,7 @@ async function refreshStatus() {
 }
 
 function unlock(token) {
+  localStorage.setItem("chainpulseUnlockToken", token);
   $("orderStatus").textContent = "已解锁";
   $("orderStatus").className = "status paid";
   $("readerLink").href = `/member.html?token=${encodeURIComponent(token)}`;

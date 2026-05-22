@@ -72,6 +72,10 @@ function wechatQr(db) {
   return process.env.WECHAT_QR_PATH || db.settings.wechatQr;
 }
 
+function redeemLockedMessage() {
+  return "这个邀请码已经被使用。请使用付款后保存的会员入口，或联系管理员重新发送访问链接。";
+}
+
 function routePath(event) {
   return event.path
     .replace(/^\/\.netlify\/functions\/api/, "")
@@ -127,11 +131,13 @@ export async function handler(event) {
       const product = db.products.find(item => item.id === productId);
       if (!product) return json(404, { error: "资料不存在" });
       if (!invite || invite.productId !== productId || invite.status !== "active") return json(400, { error: "邀请码无效，或不适用于当前资料" });
+      if (invite.usedAt) return json(409, { error: redeemLockedMessage() });
       let order = db.orders.find(item => item.inviteCode === invite.code && item.productId === productId);
       if (!order) {
         order = { id: safeToken(8), productId, inviteCode: invite.code, amount: product.price, status: "pending", unlockToken: safeToken(18), createdAt: new Date().toISOString() };
         db.orders.unshift(order);
         invite.usedAt = new Date().toISOString();
+        invite.status = "used";
         await writeDb(db);
       }
       return json(200, { product: publicProduct(product), order: { id: order.id, amount: order.amount, status: order.status, unlockToken: order.status === "paid" ? order.unlockToken : null }, wechatQr: wechatQr(db) });
