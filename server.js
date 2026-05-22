@@ -61,6 +61,14 @@ function requireAdmin(req, db) {
   return token && token === db.settings.adminToken;
 }
 
+function adminPassword(db) {
+  return process.env.ADMIN_PASSWORD || db.settings.adminPassword;
+}
+
+function wechatQr(db) {
+  return process.env.WECHAT_QR_PATH || db.settings.wechatQr;
+}
+
 function publicProduct(product) {
   return {
     id: product.id,
@@ -140,7 +148,7 @@ async function handleApi(req, res) {
   if (req.method === "GET" && url.pathname === "/api/products") {
     return send(res, 200, {
       products: db.products.map(publicProduct),
-      wechatQr: db.settings.wechatQr
+      wechatQr: wechatQr(db)
     });
   }
 
@@ -177,7 +185,7 @@ async function handleApi(req, res) {
         status: order.status,
         unlockToken: order.status === "paid" ? order.unlockToken : null
       },
-      wechatQr: db.settings.wechatQr
+      wechatQr: wechatQr(db)
     });
   }
 
@@ -223,7 +231,7 @@ async function handleApi(req, res) {
 
   if (req.method === "POST" && url.pathname === "/api/admin/login") {
     const { password } = await jsonBody(req);
-    if (password !== db.settings.adminPassword) return send(res, 401, { error: "后台密码不正确" });
+    if (password !== adminPassword(db)) return send(res, 401, { error: "后台密码不正确" });
     db.settings.adminToken = safeToken(18);
     writeDb(db);
     return send(res, 200, { token: db.settings.adminToken });
@@ -237,7 +245,7 @@ async function handleApi(req, res) {
         products: db.products.map(publicProduct),
         invites: db.invites,
         orders: db.orders,
-        settings: { wechatQr: db.settings.wechatQr }
+        settings: { wechatQr: wechatQr(db) }
       });
     }
 

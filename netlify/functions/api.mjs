@@ -64,6 +64,14 @@ function admin(event, db) {
   return token && token === db.settings.adminToken;
 }
 
+function adminPassword(db) {
+  return process.env.ADMIN_PASSWORD || db.settings.adminPassword;
+}
+
+function wechatQr(db) {
+  return process.env.WECHAT_QR_PATH || db.settings.wechatQr;
+}
+
 function routePath(event) {
   return event.path
     .replace(/^\/\.netlify\/functions\/api/, "")
@@ -110,7 +118,7 @@ export async function handler(event) {
     const query = event.queryStringParameters || {};
 
     if (method === "GET" && pathname === "/products") {
-      return json(200, { products: db.products.map(publicProduct), wechatQr: db.settings.wechatQr });
+      return json(200, { products: db.products.map(publicProduct), wechatQr: wechatQr(db) });
     }
 
     if (method === "POST" && pathname === "/invite/redeem") {
@@ -126,7 +134,7 @@ export async function handler(event) {
         invite.usedAt = new Date().toISOString();
         await writeDb(db);
       }
-      return json(200, { product: publicProduct(product), order: { id: order.id, amount: order.amount, status: order.status, unlockToken: order.status === "paid" ? order.unlockToken : null }, wechatQr: db.settings.wechatQr });
+      return json(200, { product: publicProduct(product), order: { id: order.id, amount: order.amount, status: order.status, unlockToken: order.status === "paid" ? order.unlockToken : null }, wechatQr: wechatQr(db) });
     }
 
     if (method === "GET" && pathname === "/order/status") {
@@ -152,7 +160,7 @@ export async function handler(event) {
 
     if (method === "POST" && pathname === "/admin/login") {
       const { password } = body(event);
-      if (password !== db.settings.adminPassword) return json(401, { error: "后台密码不正确" });
+      if (password !== adminPassword(db)) return json(401, { error: "后台密码不正确" });
       db.settings.adminToken = safeToken(18);
       await writeDb(db);
       return json(200, { token: db.settings.adminToken });
@@ -160,7 +168,7 @@ export async function handler(event) {
 
     if (pathname.startsWith("/admin/")) {
       if (!admin(event, db)) return json(401, { error: "请先登录后台" });
-      if (method === "GET" && pathname === "/admin/dashboard") return json(200, { products: db.products.map(publicProduct), invites: db.invites, orders: db.orders, settings: { wechatQr: db.settings.wechatQr } });
+      if (method === "GET" && pathname === "/admin/dashboard") return json(200, { products: db.products.map(publicProduct), invites: db.invites, orders: db.orders, settings: { wechatQr: wechatQr(db) } });
       if (method === "POST" && pathname === "/admin/invites") {
         const { productId = "web3-64", count = 1 } = body(event);
         const created = [];
