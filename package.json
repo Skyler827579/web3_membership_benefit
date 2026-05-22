@@ -1,0 +1,13 @@
+{
+  "name": "web3-resource-library",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "deploy:github": "bash scripts/deploy_github_netlify.sh"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.2.0"
+  },
+  "devDependencies": {}
+}

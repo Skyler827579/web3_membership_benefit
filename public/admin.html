@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web3 资料库后台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell admin-shell">
+      <section class="topbar">
+        <div>
+          <div class="eyebrow">Admin Console</div>
+          <h1>资料库后台</h1>
+        </div>
+        <a class="admin-link" href="/">前台</a>
+      </section>
+
+      <section id="loginBox" class="admin-card">
+        <h2>后台登录</h2>
+        <p>默认密码是 <strong>admin123</strong>，正式使用前请在 data/db.json 里改掉。</p>
+        <div class="inline-form compact">
+          <input id="passwordInput" type="password" placeholder="输入后台密码" />
+          <button id="loginBtn">登录</button>
+        </div>
+        <div id="loginMsg" class="message"></div>
+      </section>
+
+      <section id="dashboard" class="dashboard hidden">
+        <article class="admin-card">
+          <div class="card-head">
+            <div>
+              <h2>生成邀请码</h2>
+              <p>每个邀请码对应一份资料，客户验证后进入付款流程。</p>
+            </div>
+          </div>
+          <div class="inline-form compact">
+            <input id="inviteCount" type="number" min="1" max="100" value="5" />
+            <button id="createInviteBtn">生成</button>
+          </div>
+          <div id="createMsg" class="message"></div>
+        </article>
+
+        <article class="admin-card">
+          <div class="card-head">
+            <div>
+              <h2>每日文章</h2>
+              <p>手动生成一篇今日行情文章。部署到 Netlify 后，也可以通过定时函数每天自动生成。</p>
+            </div>
+            <button id="generateArticleBtn">生成今日文章</button>
+          </div>
+          <div id="articleMsg" class="message"></div>
+        </article>
+
+        <article class="admin-card">
+          <div class="card-head">
+            <div>
+              <h2>付款订单</h2>
+              <p>确认收到微信付款后，点击“确认已付款”，客户即可进入会员内容中心。</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>订单</th>
+                  <th>邀请码</th>
+                  <th>金额</th>
+                  <th>状态</th>
+                  <th>操作</th>
+                </tr>
+              </thead>
+              <tbody id="ordersBody"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="admin-card">
+          <div class="card-head">
+            <div>
+              <h2>邀请码列表</h2>
+              <p>复制给客户使用。当前第一档资料价格为 ¥20。</p>
+            </div>
+          </div>
+          <div id="inviteList" class="invite-list"></div>
+        </article>
+      </section>
+    </main>
+    <script src="/admin.js"></script>
+  </body>
+</html>

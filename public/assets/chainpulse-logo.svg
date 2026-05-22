@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="96" viewBox="0 0 420 96">
+  <rect width="420" height="96" rx="18" fill="#07100f"/>
+  <path d="M32 50c16-30 33-30 50 0s34 30 51 0 34-30 51 0" fill="none" stroke="#20f3b5" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="32" cy="50" r="8" fill="#20f3b5"/>
+  <circle cx="184" cy="50" r="8" fill="#20f3b5"/>
+  <text x="214" y="44" fill="#ffffff" font-family="Arial, sans-serif" font-size="28" font-weight="800">ChainPulse</text>
+  <text x="216" y="68" fill="#9fb3b0" font-family="Arial, sans-serif" font-size="13">Web3 Intelligence Library</text>
+</svg>

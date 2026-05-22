@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web3 资料库</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar">
+        <div>
+          <img class="brand-logo" src="/assets/chainpulse-logo.svg" alt="ChainPulse" />
+          <div class="eyebrow">Web3 Knowledge Library</div>
+          <h1>Web3 破局之路资料库</h1>
+        </div>
+        <a class="admin-link" href="/admin.html">后台</a>
+      </section>
+
+      <section class="layout">
+        <article class="product-panel">
+          <div class="status-pill">第一档资料 · ¥20</div>
+          <h2 id="productTitle">Web3破局之路｜完整版资料</h2>
+          <p id="productDesc">付费后解锁 ChainPulse 每日行情文章、Web3 基础学习内容、社群入口与上海 Web3 社群资源。</p>
+          <div class="info-grid">
+            <div>
+              <strong>资料形式</strong>
+              <span>网页阅读</span>
+            </div>
+            <div>
+              <strong>当前价格</strong>
+              <span id="priceText">¥20</span>
+            </div>
+            <div>
+              <strong>解锁方式</strong>
+              <span>邀请码 + 微信付款</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="access-panel">
+          <div id="stepInvite" class="step active">
+            <h3>输入邀请码</h3>
+            <p>邀请码验证通过后，会显示微信付款二维码。付款后等待后台确认，即可打开资料。</p>
+            <label for="inviteInput">邀请码</label>
+            <div class="inline-form">
+              <input id="inviteInput" placeholder="例如 WEB3-ABCD1234" autocomplete="off" />
+              <button id="redeemBtn">验证</button>
+            </div>
+            <div id="inviteMsg" class="message"></div>
+          </div>
+
+          <div id="stepPay" class="step">
+            <div class="step-head">
+              <div>
+                <h3>微信付款</h3>
+                <p>请支付 <strong id="payAmount">¥20</strong>，付款后由后台确认解锁。</p>
+              </div>
+              <span id="orderStatus" class="status waiting">待付款</span>
+            </div>
+            <div class="pay-box">
+              <img id="wechatQr" src="/assets/wechat-qr-placeholder.svg" alt="微信付款二维码" />
+              <div class="pay-copy">
+                <strong>付款备注</strong>
+                <span id="orderCode">订单生成后显示</span>
+                <button id="refreshBtn" class="secondary">刷新解锁状态</button>
+              </div>
+            </div>
+            <div id="payMsg" class="message"></div>
+          </div>
+
+          <div id="stepUnlocked" class="step">
+            <h3>资料已解锁</h3>
+            <p>付款已确认，可以在网页里阅读完整资料。</p>
+            <a id="readerLink" class="download-btn" target="_blank" rel="noreferrer">进入在线阅读</a>
+          </div>
+        </article>
+      </section>
+    </main>
+    <script src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ChainPulse 会员中心</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar">
+        <div>
+          <div class="eyebrow">ChainPulse Member</div>
+          <h1>会员内容中心</h1>
+        </div>
+        <a class="admin-link" href="/">首页</a>
+      </section>
+      <section class="member-hero">
+        <h2>已解锁：每日文章更新 + 基础学习内容 + 社群资源</h2>
+        <p>这里是 ChainPulse 的付费资料入口。你可以阅读每日市场文章，系统学习 Web3 基础内容，并查看社群资源说明。</p>
+      </section>
+      <section class="member-grid">
+        <a id="articlesLink" class="member-card">
+          <span>Daily Articles</span>
+          <strong>每日行情文章</strong>
+          <p>以文章形式更新，不以口播稿形式展示。</p>
+        </a>
+        <a id="learnLink" class="member-card">
+          <span>Learning Library</span>
+          <strong>基础学习内容</strong>
+          <p>64页资料网页化，按模块拆成可阅读章节。</p>
+        </a>
+        <a id="communityLink" class="member-card">
+          <span>Community</span>
+          <strong>社群与上海 Web3 资源</strong>
+          <p>查看社群入口说明和后续线下资源连接。</p>
+        </a>
+      </section>
+    </main>
+    <script>
+      const token = new URLSearchParams(location.search).get("token") || "";
+      for (const [id, page] of [["articlesLink","articles.html"],["learnLink","learn.html"],["communityLink","community.html"]]) {
+        document.getElementById(id).href = `/${page}?token=${encodeURIComponent(token)}`;
+      }
+    </script>
+  </body>
+</html>
