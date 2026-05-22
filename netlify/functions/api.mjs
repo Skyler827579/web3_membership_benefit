@@ -1,11 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import { fileURLToPath } from "node:url";
 import { getStore } from "@netlify/blobs";
 
-const ROOT = process.cwd();
-const SEED_DB = path.join(ROOT, "data", "db.json");
-const LEARNING = path.join(ROOT, "protected", "content", "learning.json");
+const FUNCTION_DIR = path.dirname(fileURLToPath(import.meta.url));
+const SEED_DB = path.join(FUNCTION_DIR, "data", "db.json");
+const LEARNING = path.join(FUNCTION_DIR, "data", "learning.json");
 
 function json(statusCode, body) {
   return {
