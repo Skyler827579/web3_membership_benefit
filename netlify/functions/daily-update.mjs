@@ -33,7 +33,9 @@ async function generateMarketArticle() {
 }
 
 export async function handler() {
-  const store = getStore("chainpulse-db");
+  const siteID = process.env.NETLIFY_SITE_ID || process.env.SITE_ID;
+  const token = process.env.NETLIFY_AUTH_TOKEN || process.env.NETLIFY_TOKEN;
+  const store = siteID && token ? getStore({ name: "chainpulse-db", siteID, token }) : getStore("chainpulse-db");
   const db = await store.get("db", { type: "json" });
   if (!db) return { statusCode: 404, body: "db not initialized" };
   const article = await generateMarketArticle();
