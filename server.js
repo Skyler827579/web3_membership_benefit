@@ -27,6 +27,11 @@ function send(res, status, data, headers = {}) {
   res.end(body);
 }
 
+function sendBinary(res, status, data, headers = {}) {
+  res.writeHead(status, headers);
+  res.end(data);
+}
+
 function jsonBody(req) {
   return new Promise((resolve, reject) => {
     let raw = "";
@@ -85,6 +90,16 @@ function publicProduct(product) {
 
 function paidOrderByToken(db, token) {
   return db.orders.find(item => item.unlockToken === token && item.status === "paid");
+}
+
+function learningPageFile(name) {
+  const candidates = [
+    path.join(ROOT, "netlify", "functions", "data", "learning-pages", name),
+    path.join(PROTECTED_DIR, "learning-pages", name)
+  ];
+  const found = candidates.find(file => fs.existsSync(file));
+  if (!found) throw new Error(`学习资料页面文件不存在：${name}`);
+  return found;
 }
 
 function todayKey() {
@@ -211,8 +226,21 @@ async function handleApi(req, res) {
   if (req.method === "GET" && url.pathname === "/api/content/learning") {
     const token = url.searchParams.get("token");
     if (!paidOrderByToken(db, token)) return send(res, 403, { error: "尚未解锁，请先完成付款并等待后台确认" });
-    const file = path.join(PROTECTED_DIR, "content", "learning.json");
+    const file = learningPageFile("manifest.json");
     return send(res, 200, JSON.parse(fs.readFileSync(file, "utf8")));
+  }
+
+  if (req.method === "GET" && url.pathname === "/api/content/page") {
+    const token = url.searchParams.get("token");
+    if (!paidOrderByToken(db, token)) return send(res, 403, { error: "尚未解锁，请先完成付款并等待后台确认" });
+    const page = String(url.searchParams.get("page") || "").padStart(2, "0");
+    if (!/^\d{2}$/.test(page)) return send(res, 400, { error: "页码不正确" });
+    const file = learningPageFile(`page-${page}.jpg`);
+    if (!fs.existsSync(file)) return send(res, 404, { error: "页面不存在" });
+    return sendBinary(res, 200, fs.readFileSync(file), {
+      "Content-Type": "image/jpeg",
+      "Cache-Control": "private, no-store"
+    });
   }
 
   if (req.method === "GET" && url.pathname === "/api/content/community") {

@@ -627,6 +627,39 @@ td {
   gap: 18px;
 }
 
+.page-reader {
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+}
+
+.rendered-page {
+  position: relative;
+  width: min(100%, 920px);
+  background: #fff;
+  border: 1px solid #cbd5df;
+  box-shadow: 0 12px 26px rgba(23, 32, 44, 0.12);
+}
+
+.rendered-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.rendered-page-label {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  background: rgba(255, 255, 255, 0.86);
+  color: #6b7280;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
 .content-card h2 {
   margin-bottom: 12px;
 }

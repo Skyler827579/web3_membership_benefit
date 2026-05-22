@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
+    "render:learning": "node scripts/render_learning_pages.mjs ../Web3破局之路-完整版.pdf",
     "deploy:github": "bash scripts/deploy_github_netlify.sh"
   },
   "dependencies": {

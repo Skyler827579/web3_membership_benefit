@@ -3,30 +3,16 @@ const msg = document.getElementById("contentMsg");
 const root = document.getElementById("learningContent");
 document.getElementById("backLink").href = `/member.html?token=${encodeURIComponent(token)}`;
 
-function paragraphize(text) {
-  return text
-    .split(/\n+/)
-    .map(line => line.trim())
-    .filter(Boolean)
-    .map(line => `<p>${line.replace(/[<>&]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c]))}</p>`)
-    .join("");
-}
-
 async function main() {
   try {
     const res = await fetch(`/api/content/learning?token=${encodeURIComponent(token)}`);
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || "学习内容加载失败");
-    msg.textContent = `${data.modules.length} 个模块，64 页内容已网页化。`;
-    root.innerHTML = data.modules.map(module => `
-      <article class="content-card">
-        <h2>${module.title}</h2>
-        ${module.pages.map(page => `
-          <details>
-            <summary>第 ${page.page} 页</summary>
-            <div class="page-text">${paragraphize(page.text)}</div>
-          </details>
-        `).join("")}
+    msg.textContent = `${data.pageCount} 页学习资料，已按原版页面格式展示。`;
+    root.innerHTML = data.pages.map(page => `
+      <article class="rendered-page">
+        <img src="/api/content/page?token=${encodeURIComponent(token)}&page=${page.page}" alt="第 ${page.page} 页" loading="lazy" draggable="false" />
+        <div class="rendered-page-label">第 ${page.page} 页</div>
       </article>
     `).join("");
   } catch (error) {

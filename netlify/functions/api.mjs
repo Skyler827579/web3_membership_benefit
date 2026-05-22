@@ -18,13 +18,22 @@ function bundledFile(name) {
 }
 
 const SEED_DB = bundledFile("db.json");
-const LEARNING = bundledFile("learning.json");
+const LEARNING = bundledFile(path.join("learning-pages", "manifest.json"));
 
 function json(statusCode, body) {
   return {
     statusCode,
     headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" },
     body: JSON.stringify(body)
+  };
+}
+
+function binary(statusCode, body, contentType) {
+  return {
+    statusCode,
+    isBase64Encoded: true,
+    headers: { "content-type": contentType, "cache-control": "private, no-store" },
+    body: body.toString("base64")
   };
 }
 
@@ -209,6 +218,14 @@ export async function handler(event) {
     if (method === "GET" && pathname === "/content/learning") {
       if (!paidOrderByToken(db, query.token)) return json(403, { error: "尚未解锁，请先完成付款并等待后台确认" });
       return json(200, JSON.parse(fs.readFileSync(LEARNING, "utf8")));
+    }
+
+    if (method === "GET" && pathname === "/content/page") {
+      if (!paidOrderByToken(db, query.token)) return json(403, { error: "尚未解锁，请先完成付款并等待后台确认" });
+      const page = String(query.page || "").padStart(2, "0");
+      if (!/^\d{2}$/.test(page)) return json(400, { error: "页码不正确" });
+      const file = bundledFile(path.join("learning-pages", `page-${page}.jpg`));
+      return binary(200, fs.readFileSync(file), "image/jpeg");
     }
 
     if (method === "GET" && pathname === "/content/community") {

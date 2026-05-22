@@ -3,7 +3,7 @@
   functions = "netlify/functions"
 
 [functions]
-  included_files = ["netlify/functions/data/**"]
+  included_files = ["netlify/functions/data/**", "netlify/functions/data/learning-pages/**"]
 
 [[redirects]]
   from = "/api/*"
