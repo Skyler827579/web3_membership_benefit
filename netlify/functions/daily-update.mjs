@@ -1,7 +1,5 @@
 import { getStore } from "@netlify/blobs";
 
-const store = getStore("chainpulse-db");
-
 async function generateMarketArticle() {
   const date = new Date().toISOString().slice(0, 10);
   const ids = "bitcoin,ethereum,solana,binancecoin,ripple";
@@ -35,6 +33,7 @@ async function generateMarketArticle() {
 }
 
 export async function handler() {
+  const store = getStore("chainpulse-db");
   const db = await store.get("db", { type: "json" });
   if (!db) return { statusCode: 404, body: "db not initialized" };
   const article = await generateMarketArticle();

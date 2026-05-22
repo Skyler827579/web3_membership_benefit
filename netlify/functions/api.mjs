@@ -7,8 +7,6 @@ const ROOT = process.cwd();
 const SEED_DB = path.join(ROOT, "data", "db.json");
 const LEARNING = path.join(ROOT, "protected", "content", "learning.json");
 
-const store = getStore("chainpulse-db");
-
 function json(statusCode, body) {
   return {
     statusCode,
@@ -17,7 +15,12 @@ function json(statusCode, body) {
   };
 }
 
+function dbStore() {
+  return getStore("chainpulse-db");
+}
+
 async function readDb() {
+  const store = dbStore();
   const saved = await store.get("db", { type: "json" });
   if (saved) return saved;
   const seed = JSON.parse(fs.readFileSync(SEED_DB, "utf8"));
@@ -26,6 +29,7 @@ async function readDb() {
 }
 
 async function writeDb(db) {
+  const store = dbStore();
   await store.setJSON("db", db);
 }
 
