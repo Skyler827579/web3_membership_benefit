@@ -123,10 +123,21 @@ async function generateMarketArticle() {
 
 export async function handler(event) {
   try {
-    const db = await readDb();
     const method = event.httpMethod;
     const pathname = routePath(event);
     const query = event.queryStringParameters || {};
+
+    if (method === "GET" && pathname === "/health") {
+      return json(200, {
+        ok: true,
+        hasAdminPassword: Boolean(process.env.ADMIN_PASSWORD),
+        hasWechatQrPath: Boolean(process.env.WECHAT_QR_PATH),
+        hasNetlifySiteId: Boolean(process.env.NETLIFY_SITE_ID || process.env.SITE_ID),
+        hasNetlifyAuthToken: Boolean(process.env.NETLIFY_AUTH_TOKEN || process.env.NETLIFY_TOKEN)
+      });
+    }
+
+    const db = await readDb();
 
     if (method === "GET" && pathname === "/products") {
       return json(200, { products: db.products.map(publicProduct), wechatQr: wechatQr(db) });
