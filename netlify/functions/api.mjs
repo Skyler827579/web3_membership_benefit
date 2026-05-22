@@ -1,12 +1,21 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
-import { fileURLToPath } from "node:url";
 import { getStore } from "@netlify/blobs";
 
-const FUNCTION_DIR = path.dirname(fileURLToPath(import.meta.url));
-const SEED_DB = path.join(FUNCTION_DIR, "data", "db.json");
-const LEARNING = path.join(FUNCTION_DIR, "data", "learning.json");
+function bundledFile(name) {
+  const candidates = [
+    path.join(process.env.LAMBDA_TASK_ROOT || "", "netlify", "functions", "data", name),
+    path.join(process.cwd(), "netlify", "functions", "data", name),
+    path.join(process.cwd(), "data", name)
+  ];
+  const found = candidates.find(file => file && fs.existsSync(file));
+  if (!found) throw new Error(`Bundled data file not found: ${name}`);
+  return found;
+}
+
+const SEED_DB = bundledFile("db.json");
+const LEARNING = bundledFile("learning.json");
 
 function json(statusCode, body) {
   return {
