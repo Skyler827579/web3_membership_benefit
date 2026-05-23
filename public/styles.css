@@ -714,6 +714,33 @@ td {
   margin-bottom: 14px;
 }
 
+.article-sources {
+  border-top: 1px solid var(--line);
+  margin-top: 24px;
+  padding-top: 18px;
+}
+
+.article-sources h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.article-sources ol {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--muted);
+}
+
+.article-sources li {
+  margin: 8px 0;
+  line-height: 1.55;
+}
+
+.article-sources a {
+  color: #26364a;
+  word-break: break-word;
+}
+
 details {
   border-top: 1px solid var(--line);
   padding: 12px 0;

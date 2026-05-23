@@ -14,6 +14,22 @@ function renderBlock(block) {
   return `<p>${block.text || ""}</p>`;
 }
 
+function renderSources(sources = []) {
+  if (!sources.length) return "";
+  return `
+    <section class="article-sources">
+      <h3>参考来源</h3>
+      <ol>
+        ${sources.map(source => `
+          <li>
+            <a href="${source.url}" target="_blank" rel="noreferrer">${source.label || source.title || source.url}</a>
+          </li>
+        `).join("")}
+      </ol>
+    </section>
+  `;
+}
+
 async function main() {
   try {
     const res = await fetch(`/api/articles?token=${encodeURIComponent(token)}`);
@@ -29,7 +45,7 @@ async function main() {
         <div class="eyebrow">${article.date}</div>
         <h2>${article.title}</h2>
         <p class="lead">${article.summary}</p>
-        <div class="market-table">
+        ${(article.rows || []).length ? `<div class="market-table">
           ${(article.rows || []).map(row => `
             <div>
               <strong>${row.name}</strong>
@@ -37,7 +53,7 @@ async function main() {
               <em class="${row.change24h >= 0 ? "up" : "down"}">${number(row.change24h)}%</em>
             </div>
           `).join("")}
-        </div>
+        </div>` : ""}
         <section class="daily-brief">
           <h3>行情速览</h3>
           ${(article.paragraphs || []).map(p => `<p>${p}</p>`).join("")}
@@ -46,6 +62,7 @@ async function main() {
           <div class="article-kicker">完整文章</div>
           ${(article.fullArticle || []).map(renderBlock).join("")}
         </section>
+        ${renderSources(article.sources)}
       </article>
     `).join("");
   } catch (error) {

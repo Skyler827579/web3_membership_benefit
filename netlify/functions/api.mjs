@@ -17,6 +17,16 @@ function bundledFile(name) {
   return found;
 }
 
+function bundledDir(name) {
+  const candidates = [
+    path.join(process.env.LAMBDA_TASK_ROOT || "", "netlify", "functions", "data", name),
+    path.join(process.env.LAMBDA_TASK_ROOT || "", "data", name),
+    path.join(process.cwd(), "netlify", "functions", "data", name),
+    path.join(process.cwd(), "data", name)
+  ];
+  return candidates.find(dir => dir && fs.existsSync(dir) && fs.statSync(dir).isDirectory()) || null;
+}
+
 const SEED_DB = bundledFile("db.json");
 const LEARNING = bundledFile(path.join("learning-pages", "manifest.json"));
 
@@ -109,6 +119,70 @@ function routePath(event) {
   return event.path
     .replace(/^\/\.netlify\/functions\/api/, "")
     .replace(/^\/api/, "") || "/";
+}
+
+function cleanArticleText(value) {
+  return String(value || "")
+    .replaceAll("口播稿", "文章")
+    .replaceAll("口播", "讲解");
+}
+
+function textList(value) {
+  if (!value) return [];
+  if (Array.isArray(value)) return value.map(cleanArticleText).filter(Boolean);
+  return cleanArticleText(value).split(/\n{2,}/).map(item => item.trim()).filter(Boolean);
+}
+
+function blocks(title, value) {
+  const items = textList(value);
+  if (!items.length) return [];
+  return [{ type: "h3", text: title }, ...items.map(text => ({ type: "p", text }))];
+}
+
+function sourceLabel(source) {
+  if (!source) return "";
+  const title = cleanArticleText(source.title || source.publisher || source.url);
+  const publisher = source.publisher ? `｜${cleanArticleText(source.publisher)}` : "";
+  const note = source.note ? `：${cleanArticleText(source.note)}` : "";
+  return `${title}${publisher}${note}`;
+}
+
+function transformCryptoDaily(raw) {
+  const fullArticle = [
+    ...blocks("核心结论", raw.hook),
+    ...blocks("一针见血角度", raw.sharp_angle),
+    ...blocks("辅助观点", raw.supporting_viewpoints),
+    ...blocks("核心数据", raw.core_data),
+    ...blocks("主要变化", raw.main_moves),
+    ...blocks("宏观与跨市场背景", raw.macro_background),
+    ...blocks("技术与情绪观察", [...textList(raw.technical_view), ...textList(raw.sentiment_view)]),
+    ...blocks("完整正文", raw.script),
+    ...blocks("风险提示", raw.risk_notes),
+    ...blocks("总结框架", raw.summary_framework)
+  ];
+  return {
+    id: `crypto-daily-${raw.date || raw.slug || safeToken(4)}`,
+    date: raw.date,
+    title: cleanArticleText(raw.title || "ChainPulse Daily 市场观察"),
+    summary: cleanArticleText(raw.market_one_liner || raw.hook || ""),
+    rows: [],
+    paragraphs: [raw.market_one_liner, raw.sharp_angle].map(cleanArticleText).filter(Boolean),
+    fullArticle,
+    categories: Array.isArray(raw.categories) ? raw.categories.map(cleanArticleText) : [],
+    tags: Array.isArray(raw.tags) ? raw.tags.map(cleanArticleText) : [],
+    sources: Array.isArray(raw.sources) ? raw.sources.map(source => ({ ...source, label: sourceLabel(source) })) : [],
+    createdAt: raw.date ? `${raw.date}T00:00:00.000Z` : new Date().toISOString()
+  };
+}
+
+function loadSyncedDailyArticles() {
+  const dir = bundledDir("crypto-daily");
+  if (!dir) return [];
+  return fs.readdirSync(dir)
+    .filter(file => file.endsWith(".json"))
+    .sort()
+    .reverse()
+    .map(file => transformCryptoDaily(JSON.parse(fs.readFileSync(path.join(dir, file), "utf8"))));
 }
 
 function percent(value) {
@@ -306,13 +380,13 @@ export async function handler(event) {
 
     if (method === "GET" && pathname === "/articles") {
       if (!paidOrderByToken(db, query.token)) return json(403, { error: "尚未解锁，请先完成付款并等待后台确认" });
-      if (!db.articles?.length || !db.articles[0]?.fullArticle?.length) {
+      const syncedArticles = loadSyncedDailyArticles();
+      if (!db.articles?.length && !syncedArticles.length) {
         const article = await generateArticleSafely();
-        db.articles = (db.articles || []).filter(item => item.id !== article.id);
-        db.articles.unshift(article);
+        db.articles = [article];
         await writeDb(db);
       }
-      return json(200, { articles: db.articles || [] });
+      return json(200, { articles: [...syncedArticles, ...(db.articles || [])] });
     }
 
     if (method === "POST" && pathname === "/admin/login") {
