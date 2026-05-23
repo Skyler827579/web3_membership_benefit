@@ -8,6 +8,12 @@ function number(value, digits = 2) {
   return value.toLocaleString("zh-CN", { maximumFractionDigits: digits });
 }
 
+function renderBlock(block) {
+  if (typeof block === "string") return `<p>${block}</p>`;
+  if (block.type === "h3") return `<h3>${block.text}</h3>`;
+  return `<p>${block.text || ""}</p>`;
+}
+
 async function main() {
   try {
     const res = await fetch(`/api/articles?token=${encodeURIComponent(token)}`);
@@ -32,7 +38,14 @@ async function main() {
             </div>
           `).join("")}
         </div>
-        ${(article.paragraphs || []).map(p => `<p>${p}</p>`).join("")}
+        <section class="daily-brief">
+          <h3>行情速览</h3>
+          ${(article.paragraphs || []).map(p => `<p>${p}</p>`).join("")}
+        </section>
+        <section class="daily-article">
+          <div class="article-kicker">完整文章</div>
+          ${(article.fullArticle || []).map(renderBlock).join("")}
+        </section>
       </article>
     `).join("");
   } catch (error) {

@@ -676,6 +676,44 @@ td {
   padding-left: 12px;
 }
 
+.daily-brief {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+  margin: 18px 0;
+}
+
+.daily-brief h3,
+.daily-article h3 {
+  margin: 0 0 10px;
+}
+
+.daily-article {
+  margin-top: 20px;
+}
+
+.daily-article p {
+  font-size: 16px;
+  line-height: 1.85;
+  margin: 12px 0 18px;
+}
+
+.daily-article h3 {
+  font-size: 22px;
+  padding-top: 10px;
+}
+
+.article-kicker {
+  display: inline-flex;
+  color: #08796f;
+  background: var(--accent-soft);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
 details {
   border-top: 1px solid var(--line);
   padding: 12px 0;
