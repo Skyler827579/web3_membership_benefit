@@ -18,7 +18,13 @@ async function main() {
             </section>
           `).join("")}
         </div>
-        <p class="lead">${data.note}</p>
+        <div class="community-qr">
+          <div>
+            <h3>${data.qrTitle}</h3>
+            <p>${data.qrText}</p>
+          </div>
+          <img src="${data.qr}" alt="ChainPulse 社群微信二维码" />
+        </div>
       </article>
     `;
   } catch (error) {

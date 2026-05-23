@@ -741,6 +741,28 @@ td {
   word-break: break-word;
 }
 
+.community-qr {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 24px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  margin-top: 18px;
+  padding-top: 20px;
+}
+
+.community-qr h3 {
+  margin-bottom: 10px;
+}
+
+.community-qr img {
+  width: 230px;
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
 details {
   border-top: 1px solid var(--line);
   padding: 12px 0;
@@ -828,6 +850,10 @@ summary {
   }
 
   .member-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .community-qr {
     grid-template-columns: 1fr;
   }
 }
