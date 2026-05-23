@@ -27,7 +27,7 @@ async function loadProducts() {
   const product = data.products[0];
   productId = product.id;
   $("productTitle").textContent = "ChainPulse Web3 社群权益";
-  $("productDesc").textContent = "解锁后可反复进入会员中心，查看基础学习内容、每日行情文章和社群资源说明。";
+  $("productDesc").textContent = "一次解锁，即可进入 ChainPulse 会员中心，持续查看学习资料、每日市场文章和社群资源入口。";
   $("priceText").textContent = `¥${product.price}`;
   $("payAmount").textContent = `¥${product.price}`;
   $("wechatQr").src = data.wechatQr;
