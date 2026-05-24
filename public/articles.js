@@ -39,31 +39,35 @@ async function main() {
       msg.textContent = "还没有生成每日文章。请在后台生成第一篇，之后可由定时脚本每天更新。";
       return;
     }
-    msg.textContent = `共 ${data.articles.length} 篇文章。`;
+    msg.textContent = `共 ${data.articles.length} 篇文章，点击标题展开阅读。`;
     root.innerHTML = data.articles.map(article => `
-      <article class="content-card">
-        <div class="eyebrow">${article.date}</div>
-        <h2>${article.title}</h2>
-        <p class="lead">${article.summary}</p>
-        ${(article.rows || []).length ? `<div class="market-table">
-          ${(article.rows || []).map(row => `
-            <div>
-              <strong>${row.name}</strong>
-              <span>$${number(row.usd)} / ¥${number(row.cny)}</span>
-              <em class="${row.change24h >= 0 ? "up" : "down"}">${number(row.change24h)}%</em>
-            </div>
-          `).join("")}
-        </div>` : ""}
-        <section class="daily-brief">
-          <h3>行情速览</h3>
-          ${(article.paragraphs || []).map(p => `<p>${p}</p>`).join("")}
-        </section>
-        <section class="daily-article">
-          <div class="article-kicker">完整文章</div>
-          ${(article.fullArticle || []).map(renderBlock).join("")}
-        </section>
-        ${renderSources(article.sources)}
-      </article>
+      <details class="article-item">
+        <summary>
+          <span>${article.date}</span>
+          <strong>${article.title}</strong>
+        </summary>
+        <article class="content-card article-expanded">
+          <p class="lead">${article.summary}</p>
+          ${(article.rows || []).length ? `<div class="market-table">
+            ${(article.rows || []).map(row => `
+              <div>
+                <strong>${row.name}</strong>
+                <span>$${number(row.usd)} / ¥${number(row.cny)}</span>
+                <em class="${row.change24h >= 0 ? "up" : "down"}">${number(row.change24h)}%</em>
+              </div>
+            `).join("")}
+          </div>` : ""}
+          <section class="daily-brief">
+            <h3>行情速览</h3>
+            ${(article.paragraphs || []).map(p => `<p>${p}</p>`).join("")}
+          </section>
+          <section class="daily-article">
+            <div class="article-kicker">完整文章</div>
+            ${(article.fullArticle || []).map(renderBlock).join("")}
+          </section>
+          ${renderSources(article.sources)}
+        </article>
+      </details>
     `).join("");
   } catch (error) {
     msg.textContent = error.message;

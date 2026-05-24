@@ -627,6 +627,59 @@ td {
   gap: 18px;
 }
 
+.article-item {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.article-item summary {
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 18px 20px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.article-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.article-item summary::after {
+  content: "展开";
+  justify-self: end;
+  grid-column: 2;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.article-item[open] summary::after {
+  content: "收起";
+}
+
+.article-item summary span {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.article-item summary strong {
+  color: var(--ink);
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+.article-expanded {
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+}
+
 .page-reader {
   display: grid;
   gap: 18px;
