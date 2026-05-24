@@ -234,7 +234,7 @@ async function handleApi(req, res) {
     const token = url.searchParams.get("token");
     if (!paidOrderByToken(db, token)) return send(res, 403, { error: "尚未解锁，请先完成付款并等待后台确认" });
     const page = String(url.searchParams.get("page") || "").padStart(2, "0");
-    if (!/^\d{2}$/.test(page)) return send(res, 400, { error: "页码不正确" });
+    if (!/^\d{2,3}$/.test(page)) return send(res, 400, { error: "页码不正确" });
     const file = learningPageFile(`page-${page}.jpg`);
     if (!fs.existsSync(file)) return send(res, 404, { error: "页面不存在" });
     return sendBinary(res, 200, fs.readFileSync(file), {

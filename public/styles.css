@@ -639,9 +639,10 @@ td {
   background: #fff;
   border: 1px solid #cbd5df;
   box-shadow: 0 12px 26px rgba(23, 32, 44, 0.12);
+  -webkit-touch-callout: none;
 }
 
-.rendered-page img {
+.rendered-page canvas {
   display: block;
   width: 100%;
   height: auto;
@@ -854,6 +855,84 @@ summary {
   }
 
   .community-qr {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .shell,
+  .admin-shell,
+  .content-shell {
+    width: min(100vw - 24px, 100%);
+    padding-top: 20px;
+  }
+
+  h1 {
+    font-size: 29px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .admin-card {
+    padding: 18px;
+  }
+
+  .inline-form,
+  .inline-form.compact {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .inline-form button,
+  .admin-card button {
+    width: 100%;
+  }
+
+  .table-wrap {
+    overflow: visible;
+  }
+
+  table {
+    min-width: 0;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  tr {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    background: var(--soft);
+  }
+
+  td {
+    border: 0;
+    padding: 8px 0;
+    word-break: break-word;
+  }
+
+  td::before {
+    content: attr(data-label);
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 3px;
+  }
+
+  .invite-list {
     grid-template-columns: 1fr;
   }
 }

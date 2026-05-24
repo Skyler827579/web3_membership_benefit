@@ -55,11 +55,11 @@ function renderOrders(orders) {
   for (const order of orders) {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${order.id}</td>
-      <td>${order.inviteCode}</td>
-      <td>¥${order.amount}</td>
-      <td><span class="status ${order.status === "paid" ? "paid" : "waiting"}">${order.status === "paid" ? "已付款" : "待确认"}</span></td>
-      <td>${order.status === "paid" ? "已解锁" : `<button data-order="${order.id}">确认已付款</button>`}</td>
+      <td data-label="订单">${order.id}</td>
+      <td data-label="邀请码">${order.inviteCode}</td>
+      <td data-label="金额">¥${order.amount}</td>
+      <td data-label="状态"><span class="status ${order.status === "paid" ? "paid" : "waiting"}">${order.status === "paid" ? "已付款" : "待确认"}</span></td>
+      <td data-label="操作">${order.status === "paid" ? "已解锁" : `<button data-order="${order.id}">确认已付款</button>`}</td>
     `;
     body.appendChild(tr);
   }

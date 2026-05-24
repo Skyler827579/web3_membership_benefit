@@ -368,7 +368,7 @@ export async function handler(event) {
     if (method === "GET" && pathname === "/content/page") {
       if (!paidOrderByToken(db, query.token)) return json(403, { error: "尚未解锁，请先完成付款并等待后台确认" });
       const page = String(query.page || "").padStart(2, "0");
-      if (!/^\d{2}$/.test(page)) return json(400, { error: "页码不正确" });
+      if (!/^\d{2,3}$/.test(page)) return json(400, { error: "页码不正确" });
       const file = bundledFile(path.join("learning-pages", `page-${page}.jpg`));
       return binary(200, fs.readFileSync(file), "image/jpeg");
     }
