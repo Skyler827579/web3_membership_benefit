@@ -156,7 +156,8 @@ function transformCryptoDaily(raw) {
     ...blocks("主要变化", raw.main_moves),
     ...blocks("宏观与跨市场背景", raw.macro_background),
     ...blocks("技术与情绪观察", [...textList(raw.technical_view), ...textList(raw.sentiment_view)]),
-    ...blocks("完整正文", raw.script),
+    ...blocks("完整正文（3-5分钟版）", raw.script),
+    ...blocks("精简版正文", raw.short_script),
     ...blocks("风险提示", raw.risk_notes),
     ...blocks("总结框架", raw.summary_framework)
   ];
