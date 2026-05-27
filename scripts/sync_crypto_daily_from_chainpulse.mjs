@@ -8,14 +8,19 @@ function todayKey() {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Shanghai" }).format(new Date());
 }
 
-function todaySourceFile() {
-  const today = path.join(sourceDir, `${todayKey()}.json`);
-  if (fs.existsSync(today)) return today;
-  throw new Error(`没有找到今日 Crypto Daily 文章：${today}`);
+function sourceFilesThroughToday() {
+  const key = todayKey();
+  const today = path.join(sourceDir, `${key}.json`);
+  if (!fs.existsSync(today)) throw new Error(`没有找到今日 Crypto Daily 文章：${today}`);
+  return fs.readdirSync(sourceDir)
+    .filter(file => /^\d{4}-\d{2}-\d{2}\.json$/.test(file) && file.slice(0, 10) <= key)
+    .sort();
 }
 
 fs.mkdirSync(targetDir, { recursive: true });
-const source = todaySourceFile();
-const target = path.join(targetDir, path.basename(source));
-fs.copyFileSync(source, target);
-console.log(`Synced ${source} -> ${target}`);
+for (const file of sourceFilesThroughToday()) {
+  const source = path.join(sourceDir, file);
+  const target = path.join(targetDir, file);
+  fs.copyFileSync(source, target);
+  console.log(`Synced ${source} -> ${target}`);
+}

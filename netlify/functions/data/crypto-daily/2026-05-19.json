@@ -1,0 +1,289 @@
+{
+  "date": "2026-05-19",
+  "slug": "2026-05-19-warsh-yields-keep-crypto-defensive",
+  "title": "币圈反弹，为什么不敢追？",
+  "hook": "今天最适合讲的一句话是：币圈不是没有反弹，而是每一次反弹都要先经过美债收益率、美元和新 Fed 反应函数的审判。",
+  "market_one_liner": "截至 5 月 19 日亚洲时段，BTC 在 7.66 万美元附近小幅修复，ETH 约 2123 美元，全球加密总市值约 2.56 万亿美元；但 BTC 和 ETH ETF 仍录得净流出，美债长端收益率维持高位，Warsh 接任后的政策预期仍是市场真正的定价锚。",
+  "sharp_angle": "不是币圈缺利好，而是宏观资金还没有确认“钱的成本”会降下来。",
+  "supporting_viewpoints": [
+    "已确认事实：CoinMarketCap 显示 BTC 约 76642 美元，ETH 约 2123 美元，全球加密总市值约 2.56 万亿美元，BTC 主导地位约 60.04%。",
+    "已确认事实：CryptoETF.today 显示 5 月 19 日 BTC ETF 24 小时净流出约 2.904 亿美元，ETH ETF 净流出约 6570 万美元，SOL 与 XRP ETF 小幅净流入。",
+    "已确认事实：美国 4 月 CPI 同比 3.8%、核心 CPI 同比 2.8%；PPI 最终需求环比 1.4%、同比 6.0%，热通胀限制了快速降息想象。",
+    "已确认事实：Slickcharts/Treasury 数据显示 5 月 18 日 2 年期美债收益率约 4.07%，10 年期约 4.61%，30 年期约 5.14%，曲线继续陡峭化。",
+    "市场解读：Warsh 已正式接任美联储主席，债市和风险资产正在重新评估他会先服从政治降息压力，还是先捍卫通胀可信度。",
+    "个人分析推断：当前加密市场的关键不是单日涨跌，而是宏观上游变量尚未给出“可以全面加风险”的信号。"
+  ],
+  "main_moves": [
+    "BTC 报价约 76642 美元，24 小时小涨约 0.25%，但 8 万美元上方供应仍没有被重新夺回。",
+    "ETH 报价约 2123 美元，24 小时小涨约 0.65%，表现没有明显强于 BTC，说明资金扩散仍有限。",
+    "SOL 约 85.22 美元，XRP 约 1.38 美元，DOGE 约 0.1045 美元，主流山寨币以局部修复为主。",
+    "全球加密总市值约 2.56 万亿美元，24 小时成交量约 955 亿美元，市场有成交，但方向并不干净。",
+    "美国现货 ETF 继续分化：BTC、ETH 产品净流出，SOL、XRP 小幅净流入，说明资金更愿意做结构交易，而不是全面买入风险。"
+  ],
+  "hot_coins": [
+    "Zcash ZEC 约 570.36 美元，24 小时涨幅约 8.02%，是今日高波动热币之一。",
+    "Bitcoin Cash BCH 约 376.66 美元，24 小时涨幅约 6.21%，偏向老牌币种补涨交易。",
+    "Hyperliquid HYPE 约 47.54 美元，24 小时涨幅约 3.27%，7 日涨幅约 14.53%，仍维持较高关注度。",
+    "DOGE 虽小幅上涨，但价格约 0.1045 美元，更多是情绪修复，不足以证明散户风险偏好全面回归。",
+    "热币异动的重点是持续性：如果 BTC 不能重新站回 8 万美元以上，局部强势容易变成短线轮动。"
+  ],
+  "macro_background": [
+    "美国通胀仍是第一约束：4 月 CPI 环比 0.6%、同比 3.8%，能源和住房贡献明显；PPI 环比 1.4%、同比 6.0%，显示企业成本端压力更重。",
+    "就业没有明显失速：4 月非农新增 11.5 万人，失业率 4.3%；截至 5 月 9 日当周初请失业金 21.1 万人，仍处历史低位区间。",
+    "消费有韧性但结构变差：美国 4 月零售销售环比增长 0.5%，低于 3 月修正后的 1.6%，高油价开始挤压非必需消费。",
+    "美国制造业仍扩张但价格压力强：ISM 4 月制造业 PMI 为 52.7，价格指数升至 84.6，新订单扩张，就业分项仍收缩。",
+    "本周宏观日历的核心是 5 月 20 日 FOMC 会议纪要，随后有美国房屋开工、建筑许可、费城联储制造业指数和密歇根消费者信心终值。",
+    "中国方面，4 月 CPI 同比 1.2%、PPI 同比 2.8%、制造业 PMI 50.3；1-4 月固定资产投资同比下降 1.6%，房地产开发投资下降 13.7%，但高技术产业投资增长 6.1%。",
+    "跨资产方面，5 月 18 日美股分化，标普 500 跌 0.1%，纳指跌 0.5%，道指涨 0.3%；科技成长股没有给加密市场提供强 risk-on 背景。",
+    "外汇和商品方面，美元指数在 99 附近波动，EUR/USD 约 1.16 区域，USD/JPY 仍受利差和能源冲击支撑；黄金约 4570 美元、白银约 78 美元附近，避险需求仍在，但高实际利率限制追涨空间。"
+  ],
+  "technical_view": [
+    "BTC 短线第一压力仍是 78000 到 80000 美元，重新站上 80000 美元以前，反弹更像修复而不是趋势反转。",
+    "下方重点看 76000 到 76600 美元，若失守，市场会重新测试 75000 美元一带的买盘厚度。",
+    "ETH 在 2100 到 2200 美元区间震荡，尚未展示对 BTC 的明显相对强势。",
+    "SOL 和 XRP 有局部资金流，但 ETF 层面的正流入规模较小，还不能替代 BTC ETF 的方向性信号。",
+    "技术面最关键的确认条件是：BTC 站回 8 万美元、ETH 重新夺回 2200 美元、ETF 流出明显收窄，并且美债收益率不再上冲。"
+  ],
+  "sentiment_view": [
+    "市场情绪处在“能反弹但不敢追”的状态，买盘更愿意做短线和局部标的，而不是全面加杠杆。",
+    "BTC ETF 和 ETH ETF 净流出仍压制机构情绪，尤其在关键压力位附近会削弱突破质量。",
+    "Warsh 接任后的第一批政策沟通还没有完成，市场对 6 月 FOMC 的判断仍偏谨慎。",
+    "热币如 ZEC、BCH、HYPE 有表现，但这更像存量资金轮动，不是山寨季全面启动。",
+    "黄金和白银仍有避险需求，但美元和收益率高位也提醒市场：避险资产与高 beta 资产都要面对真实利率约束。"
+  ],
+  "reasons": [
+    "上游原因/政策预期变化：Warsh 正式接任美联储主席，市场重新评估 Fed 的反应函数，尤其是他面对热通胀、政治降息压力和央行独立性时会如何排序。",
+    "上游原因/宏观数据变化：美国 CPI、PPI 和 ISM 价格分项均显示通胀压力仍高，就业和消费又没有快速失速，这使快速降息缺乏数据基础。",
+    "中间传导/利率与美元：2 年期美债约 4.07%，10 年期约 4.61%，30 年期约 5.14%，长端和实际利率高位抬高了 BTC、科技股和黄金的持有机会成本。",
+    "中间传导/资金流：BTC 和 ETH ETF 继续净流出，说明机构资金还在降低或对冲风险敞口；SOL、XRP 小幅流入只能说明结构性需求存在。",
+    "中间传导/跨资产：纳指回落、油价和地缘冲突扰动、美元指数维持 99 附近，使加密市场缺少统一的流动性顺风。",
+    "下游表现/价格：BTC 小幅反弹但仍低于 8 万美元关键区，ETH 和主流山寨币没有强势扩散。",
+    "下游表现/情绪：ZEC、BCH、HYPE 的上涨说明局部交易活跃，但没有改变整体市场仍由宏观定价主导的事实。"
+  ],
+  "risk_notes": [
+    "这不是投资建议，不承诺涨跌。",
+    "5 月 19 日亚洲时段，美国现货 ETF 和美股当日交易尚未结束，部分 ETF、股指和宏观市场数据以 5 月 18 日最新可得数据为准。",
+    "Warsh 因素属于政策预期变量，不能被简单贴成绝对鹰派或绝对鸽派。",
+    "若 FOMC 纪要、Warsh 表态或能源价格变化带来更鸽派预期，市场可能快速修复。",
+    "若 10 年期和 30 年期美债收益率继续上行，BTC 即使有监管利好也可能继续被估值压力压制。",
+    "中国数据里官方表述偏稳，但市场更关注投资、地产和消费的弱项，解读时要区分事实和市场情绪。"
+  ],
+  "oral_suitability": "适合 3-5 分钟中文短视频口播，核心冲突明确：币价有反弹，但市场不敢追，因为上游政策和利率价格还没有松动。",
+  "core_data": [
+    "CoinMarketCap 显示 BTC 约 76642 美元，ETH 约 2123 美元，SOL 约 85.22 美元，XRP 约 1.38 美元，DOGE 约 0.1045 美元。",
+    "CoinMarketCap 显示全球加密总市值约 2.56 万亿美元，24 小时成交量约 955.3 亿美元，BTC 主导地位约 60.04%。",
+    "ZEC 约 570.36 美元，24 小时涨幅约 8.02%；BCH 约 376.66 美元，24 小时涨幅约 6.21%；HYPE 约 47.54 美元，24 小时涨幅约 3.27%。",
+    "CryptoETF.today 显示 BTC ETF 24 小时净流出约 2.904 亿美元，ETH ETF 净流出约 6570 万美元，SOL ETF 净流入约 650 万美元，XRP ETF 净流入约 730 万美元。",
+    "The Block 报道 5 月 14 日 BTC ETF 单日净流出约 6.3 亿美元，Glassnode 7 日均值降至每日约 -8800 万美元。",
+    "BLS 显示美国 4 月 CPI 环比 0.6%、同比 3.8%，核心 CPI 同比 2.8%。",
+    "BLS 显示美国 4 月 PPI 最终需求环比 1.4%、同比 6.0%，为 2022 年以来较高读数。",
+    "BLS 显示美国 4 月非农就业新增 11.5 万人，失业率 4.3%。",
+    "AP 报道截至 5 月 9 日当周美国初请失业金 21.1 万人；4 月零售销售环比增长 0.5%，低于 3 月修正后的 1.6%。",
+    "ISM 4 月制造业 PMI 为 52.7，价格指数 84.6，新订单 54.1，就业 46.4。",
+    "Slickcharts/Treasury 显示 5 月 18 日 2 年期美债收益率 4.07%，10 年期 4.61%，30 年期 5.14%。",
+    "AP 统计 5 月 18 日美股：标普 500 跌 0.1%至 7403.05，道指涨 0.3%至 49686.12，纳指跌 0.5%至 26090.73。",
+    "Investing.com 页面显示美元指数约 98.997，黄金期货约 4571.51 美元，白银期货约 78.053 美元，10 年期美债收益率约 4.601%。",
+    "中国国家统计局显示 4 月 CPI 同比 1.2%、PPI 同比 2.8%、制造业 PMI 50.3；1-4 月固定资产投资同比下降 1.6%，房地产开发投资下降 13.7%。",
+    "参议院银行委员会 5 月 14 日推进 Digital Asset Market Clarity Act，属于中长期监管框架利好，但短线仍被宏观资金环境过滤。"
+  ],
+  "talking_points": [
+    "开头先抛冲突：为什么币价有反弹，但市场还是不敢追？",
+    "第一层讲上游：Warsh 接任后，市场重新定价 Fed 的反应函数。",
+    "第二层讲数据：CPI、PPI、就业、零售和 ISM 共同指向“通胀热、经济没崩”。",
+    "第三层讲传导：高美债收益率、美元偏强、ETF 流出，压制风险资产估值。",
+    "第四层讲表现：BTC 卡在 8 万美元下方，ETH 没有强势领涨，热币只是局部轮动。",
+    "第五层讲观察清单：FOMC 纪要、Warsh 表态、10 年期收益率、ETF 是否转正、BTC 能否站回 8 万美元。"
+  ],
+  "takeaways": [
+    "今天不是单纯的币圈行情，而是宏观定价继续压住加密反弹。",
+    "监管利好仍在，但它需要利率和资金环境配合，才会转化成更强价格趋势。",
+    "BTC、ETH ETF 流向比单个热币涨幅更能代表机构风险偏好。",
+    "Warsh Fed 的第一阶段沟通，是接下来几周风险资产最重要的上游变量之一。",
+    "短视频讲法要少喊涨跌，多讲顺序：政策预期、利率美元、ETF 资金、最后才是币价和技术位。"
+  ],
+  "summary_framework": [
+    "核心结论：币圈有修复，但还不是全面进攻，因为上游利率和 Fed 预期没有松动。",
+    "一针见血角度：今天市场问的不是 BTC 会不会涨，而是 Warsh Fed 会不会让钱更便宜。",
+    "辅助观点：ETF 继续流出说明机构仍谨慎，ZEC、BCH、HYPE 的上涨只是局部轮动。",
+    "核心数据：BTC 约 76642 美元，ETH 约 2123 美元，全球加密总市值约 2.56 万亿美元，BTC ETF 24 小时净流出约 2.904 亿美元，10 年期美债约 4.61%。",
+    "三层框架：上游是 Fed 反应函数和通胀，中游是收益率、美元与 ETF，下游是 BTC 关键位和热币情绪。",
+    "风险提示：美盘尚未结束，FOMC 纪要、能源价格、Warsh 表态和 ETF 资金都可能改变短线节奏。"
+  ],
+  "avoid_angles": [
+    "不要把单日小反弹说成牛市重新启动。",
+    "不要把 ZEC、BCH、HYPE 的局部强势包装成全面山寨季。",
+    "不要只罗列 ETF 流出、收益率上行、技术位失守，要先讲 Warsh Fed 和通胀这个上游变量。",
+    "不要把 Warsh 简化成绝对鹰派或绝对鸽派，要讲成市场正在重新定价 Fed 反应函数。",
+    "不要使用旧分类名“宏观驱动”“技术分析”“市场情绪”。"
+  ],
+  "script": "大家好，今天这条先讲一个很适合短视频开头的问题：币圈明明有反弹，为什么市场还是不敢追？\n\n先说结论：今天不是没有买盘，而是买盘还在等一个更大的答案。这个答案不是某个币有没有消息，也不是某根 K 线好不好看，而是美债收益率、美元和新美联储主席 Warsh 到底会把钱的成本定在哪里。\n\n截至 5 月 19 日亚洲时段，BTC 大约在 7.66 万美元附近，ETH 在 2120 美元附近，SOL 大约 85 美元，XRP 大约 1.38 美元。全球加密总市值大约 2.56 万亿美元，BTC 主导地位在 60% 附近。表面看，市场没有崩，甚至有一些修复。\n\n但关键问题是：这个修复为什么不够有说服力？\n\n第一层，上游变量，还是 Fed。\n\nKevin Warsh 已经接任美联储主席。这个事情不能只当成一个人事新闻。对市场来说，美联储主席换人，真正改变的是市场对 Fed 反应函数的判断。也就是说，面对通胀、增长、政治压力和金融市场，新的 Fed 到底先照顾谁？\n\n如果市场相信 Warsh 会很快降息，那 BTC、科技股、黄金这些资产都会舒服一些。但现在的问题是，美国数据并不给他太多空间。4 月 CPI 同比 3.8%，核心 CPI 同比 2.8%；PPI 最终需求环比 1.4%，同比 6.0%。这说明消费端通胀热，企业成本端更热。\n\n更麻烦的是，就业也没有立刻崩。4 月非农新增 11.5 万人，失业率 4.3%；截至 5 月 9 日当周，初请失业金是 21.1 万人，仍然偏低。零售销售 4 月环比增长 0.5%，虽然比 3 月慢，但还不能说消费已经失速。\n\n所以市场会问：通胀热，经济没崩，Fed 凭什么马上大幅降息？这就是今天所有风险资产都绕不开的问题。\n\n第二层，中间传导，是美债收益率和美元。\n\n5 月 18 日的数据里，2 年期美债收益率大约 4.07%，10 年期大约 4.61%，30 年期大约 5.14%。长端收益率这么高，代表市场对通胀、财政和期限溢价都还不放心。对加密市场来说，这很直接：当美债给出更高无风险收益，资金就会重新计算，为什么要追高波动更大的 BTC 和山寨币？\n\n美元也在 99 附近波动。EUR/USD 大约在 1.16 区域，USD/JPY 仍受到利差和能源价格支撑。美元和收益率只要不明显转弱，加密市场的反弹就很容易变成上有压力、下有支撑的震荡。\n\n再看 ETF。CryptoETF.today 显示，BTC ETF 24 小时净流出大约 2.9 亿美元，ETH ETF 净流出大约 6570 万美元。SOL 和 XRP ETF 有小幅净流入，但规模不大。这个信号很重要：资金没有完全离场，但机构资金还没有全面回来。\n\n第三层，下游表现，就是币价和热币。\n\nBTC 现在最关键的不是今天涨了 0.2% 还是跌了 0.2%，而是能不能重新站回 8 万美元上方。站不上去，反弹就还是修复。ETH 在 2100 到 2200 美元之间，也没有明显强于 BTC。一个真正强的行情，通常要看到 BTC 稳住，ETH 跟上，SOL 和山寨扩散，ETF 也转为连续流入。现在这些条件还没有同时出现。\n\n热币方面，今天 ZEC、BCH、HYPE 有表现。ZEC 24 小时涨幅在 8% 左右，BCH 涨幅在 6% 左右，HYPE 也继续保持热度。但这些更像局部轮动。它们可以说明市场没有死水一潭，却不能证明山寨季已经全面启动。\n\n再把视角放大一点。5 月 18 日美股也不统一，标普 500 小跌 0.1%，纳指跌 0.5%，道指涨 0.3%。这说明风险资产不是单边 risk-on。黄金和白银仍有避险支撑，黄金在 4570 美元附近，白银在 78 美元附近，但它们同样要面对高实际利率的压力。\n\n中国这边，4 月 CPI 同比 1.2%，PPI 同比 2.8%，制造业 PMI 50.3。1 到 4 月固定资产投资同比下降 1.6%，房地产开发投资下降 13.7%，但高技术产业投资增长 6.1%。这组数据说明中国不是没有政策托底，也不是没有结构亮点，但内需、地产和投资压力仍然会影响亚洲风险偏好。\n\n所以今天这条视频，最重要的不是喊多还是喊空，而是讲清楚顺序。\n\n上游，是 Warsh Fed、热通胀和政策预期。中游，是美债收益率、美元和 ETF 资金流。下游，才是 BTC 能不能站回 8 万美元，ETH 能不能强起来，ZEC、BCH、HYPE 这些热币能不能延续。\n\n接下来最该盯的几个点很清楚：第一，5 月 20 日 FOMC 会议纪要会不会释放更鹰派的信息；第二，Warsh 上任后的公开表态会不会强调抗通胀；第三，10 年期美债收益率能不能从 4.6% 附近降下来；第四，BTC 和 ETH ETF 能不能重新转成连续净流入；第五，BTC 能不能有效站回 8 万美元。\n\n最后提醒一句，这不是投资建议，也不承诺涨跌。今天的核心观点是：币圈不是没有反弹，而是反弹还在等宏观放行。只要钱的成本还高，美元还不弱，ETF 还在流出，市场就很难从局部修复直接切换成全面进攻。",
+  "video_titles": [
+    "币不敢追",
+    "利率压盘",
+    "ETF流出",
+    "热币轮动",
+    "盯紧Fed"
+  ],
+  "categories": [
+    "每日行情",
+    "宏观",
+    "经济指标",
+    "美股",
+    "亚洲市场",
+    "A股港股",
+    "债市",
+    "外汇市场",
+    "黄金白银",
+    "主流加密货币",
+    "热币异动",
+    "监管/ETF",
+    "市场技术分析",
+    "情绪分析",
+    "链上数据"
+  ],
+  "tags": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "XRP",
+    "ETF",
+    "Warsh",
+    "美债收益率",
+    "DXY",
+    "黄金白银"
+  ],
+  "sources": [
+    {
+      "title": "Today's Cryptocurrency Prices by Market Cap",
+      "url": "https://coinmarketcap.com/",
+      "publisher": "CoinMarketCap",
+      "note": "用于核对 BTC、ETH、SOL、XRP、DOGE、ZEC、BCH、HYPE、总市值、成交量和 BTC 主导地位。"
+    },
+    {
+      "title": "Crypto ETF real-time flows",
+      "url": "https://cryptoetf.today/en",
+      "publisher": "CryptoETF.today",
+      "note": "用于核对 BTC、ETH、SOL、XRP 现货 ETF 24 小时净流向和 AUM。"
+    },
+    {
+      "title": "Rally without conviction: Bitcoin ETFs see $630M in outflows",
+      "url": "https://www.theblock.co/post/401247/rally-without-conviction-bitcoin-etfs-see-630m-in-outflows-as-corporate-treasury-demand-drops-and-resistance-builds",
+      "publisher": "The Block",
+      "note": "用于参考 BTC ETF 单日大额流出、7 日均值和机构需求放缓解读。"
+    },
+    {
+      "title": "Kevin Warsh's bond market bind",
+      "url": "https://www.axios.com/2026/05/18/warsh-bond-market-energy-ai",
+      "publisher": "Axios",
+      "note": "用于参考 Warsh 接任后的债市约束、能源冲击和 Fed 反应函数重估。"
+    },
+    {
+      "title": "What to Look Out for in Economic Data This Week (May 18-22)",
+      "url": "https://www.kiplinger.com/investing/economy/this-weeks-economic-calendar",
+      "publisher": "Kiplinger",
+      "note": "用于核对本周宏观日历，包括 FOMC 纪要、房屋开工、费城联储制造业指数和消费者信心。"
+    },
+    {
+      "title": "Consumer Price Index Summary - April 2026",
+      "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "note": "用于核对美国 4 月 CPI 环比、同比、核心 CPI、能源和住房分项。"
+    },
+    {
+      "title": "Producer Price Index News Release - April 2026",
+      "url": "https://www.bls.gov/news.release/ppi.nr0.htm",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "note": "用于核对美国 4 月 PPI 最终需求环比、同比及能源、服务分项。"
+    },
+    {
+      "title": "Employment Situation Summary - April 2026",
+      "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "note": "用于核对美国 4 月非农新增就业和失业率。"
+    },
+    {
+      "title": "US filings for jobless benefits hits 211,000",
+      "url": "https://apnews.com/article/b57b326ca4c4b04cf3881e80d5a48a90",
+      "publisher": "AP",
+      "note": "用于核对截至 5 月 9 日当周美国初请失业金。"
+    },
+    {
+      "title": "Retail sales growth slowed in April",
+      "url": "https://apnews.com/article/f77b8986d274c40b913c26ba39492ead",
+      "publisher": "AP",
+      "note": "用于核对美国 4 月零售销售环比增速和消费受高油价影响。"
+    },
+    {
+      "title": "April 2026 ISM Manufacturing PMI Report",
+      "url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/april/",
+      "publisher": "Institute for Supply Management",
+      "note": "用于核对美国制造业 PMI、新订单、就业和价格指数。"
+    },
+    {
+      "title": "US Treasury Yields",
+      "url": "https://www.slickcharts.com/treasury",
+      "publisher": "Slickcharts / Treasury.gov",
+      "note": "用于核对 5 月 18 日美国 2 年期、10 年期、30 年期国债收益率和曲线变化。"
+    },
+    {
+      "title": "Daily Treasury Par Yield Curve Rates",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_bill_rates",
+      "publisher": "U.S. Department of the Treasury",
+      "note": "用于交叉参考美国财政部利率数据来源。"
+    },
+    {
+      "title": "How major US stock indexes fared Monday 5/18/2026",
+      "url": "https://apnews.com/article/ea02a38eb60bd7d29444b845a6467472",
+      "publisher": "AP",
+      "note": "用于核对标普 500、道指、纳指和罗素 2000 的 5 月 18 日收盘表现。"
+    },
+    {
+      "title": "China April factory output, retail sales miss forecasts amid weak domestic demand",
+      "url": "https://www.investing.com/news/economic-indicators/china-april-factory-output-retail-sales-miss-forecasts-amid-weak-domestic-demand-4694607",
+      "publisher": "Investing.com / Reuters",
+      "note": "用于参考中国 4 月工业、零售、投资数据的市场解读，并核对 DXY、黄金、白银、10 年期美债等行情栏数据。"
+    },
+    {
+      "title": "Daily FX 18th May 2026",
+      "url": "https://www.sucdenfinancial.com/en/market-insights/fx-outlook/daily-fx-analysis/2026-05-18/",
+      "publisher": "Sucden Financial",
+      "note": "用于参考 EUR/USD、USD/JPY、美元和能源冲击对外汇市场的影响。"
+    },
+    {
+      "title": "Consumer Price Index in April 2026",
+      "url": "https://www.stats.gov.cn/english/PressRelease/202605/t20260512_1963677.html",
+      "publisher": "National Bureau of Statistics of China",
+      "note": "用于核对中国 4 月 CPI。"
+    },
+    {
+      "title": "Industrial Producer Price Indexes in April 2026",
+      "url": "https://www.stats.gov.cn/english/PressRelease/202605/t20260512_1963676.html",
+      "publisher": "National Bureau of Statistics of China",
+      "note": "用于核对中国 4 月 PPI。"
+    },
+    {
+      "title": "Purchasing Managers' Index for April 2026",
+      "url": "https://www.stats.gov.cn/english/PressRelease/202605/t20260506_1963595.html",
+      "publisher": "National Bureau of Statistics of China",
+      "note": "用于核对中国 4 月制造业 PMI。"
+    },
+    {
+      "title": "National Economy Maintained the Development Momentum of Steady Progress in the First Four Months",
+      "url": "https://www.stats.gov.cn/english/PressRelease/202605/t20260518_1963724.html",
+      "publisher": "National Bureau of Statistics of China",
+      "note": "用于核对中国 1-4 月固定资产投资、房地产投资、高技术产业投资、进出口和政策表述。"
+    },
+    {
+      "title": "Chairman Scott Leads Historic Markup of Digital Asset Market Structure Legislation",
+      "url": "https://www.banking.senate.gov/newsroom/majority/chairman-scott-leads-historic-markup-of-digital-asset-market-structure-legislation",
+      "publisher": "U.S. Senate Banking Committee",
+      "note": "用于确认 Digital Asset Market Clarity Act 在参议院银行委员会推进。"
+    },
+    {
+      "title": "Senate Banking Advances Market Structure, Senate Confirms Warsh as Fed Chair",
+      "url": "https://www.paulhastings.com/insights/crypto-policy-tracker/senate-banking-advances-market-structure-senate-confirms-warsh-as-fed-chair-ncua-proposes-stablecoin-issuer-standards-prediction-markets-litigation-continues",
+      "publisher": "Paul Hastings",
+      "note": "用于参考 CLARITY Act、Warsh 确认和加密政策进展的综合政策追踪。"
+    }
+  ]
+}
