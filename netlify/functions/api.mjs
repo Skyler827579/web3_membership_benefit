@@ -48,7 +48,18 @@ function binary(statusCode, body, contentType) {
 }
 
 function dbStore() {
+  const siteID = process.env.NETLIFY_SITE_ID || process.env.SITE_ID;
+  const token = process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_AUTH_TOKEN;
+  if (siteID && token) return getStore({ name: "chainpulse-db", siteID, token });
   return getStore("chainpulse-db");
+}
+
+function publicErrorMessage(error) {
+  const message = String(error?.message || "");
+  if (/Netlify Blobs|401|not been configured|siteID|token/i.test(message)) {
+    return "会员数据库暂时无法连接，请稍后重试或联系管理员检查 Netlify Blobs 配置。";
+  }
+  return message || "服务器错误";
 }
 
 async function readDb() {
@@ -322,7 +333,9 @@ export async function handler(event) {
       return json(200, {
         ok: true,
         hasAdminPassword: Boolean(process.env.ADMIN_PASSWORD),
-        hasWechatQrPath: Boolean(process.env.WECHAT_QR_PATH)
+        hasWechatQrPath: Boolean(process.env.WECHAT_QR_PATH),
+        hasNetlifySiteId: Boolean(process.env.NETLIFY_SITE_ID || process.env.SITE_ID),
+        hasNetlifyBlobsToken: Boolean(process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_AUTH_TOKEN)
       });
     }
 
@@ -429,6 +442,6 @@ export async function handler(event) {
 
     return json(404, { error: "接口不存在" });
   } catch (error) {
-    return json(500, { error: error.message || "服务器错误" });
+    return json(500, { error: publicErrorMessage(error) });
   }
 }
