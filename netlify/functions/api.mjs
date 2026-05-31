@@ -49,7 +49,7 @@ function binary(statusCode, body, contentType) {
 
 function dbStore() {
   const siteID = process.env.NETLIFY_SITE_ID || process.env.SITE_ID;
-  const token = process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_AUTH_TOKEN;
+  const token = process.env.NETLIFY_BLOBS_TOKEN;
   if (siteID && token) return getStore({ name: "chainpulse-db", siteID, token });
   return getStore("chainpulse-db");
 }
@@ -335,7 +335,8 @@ export async function handler(event) {
         hasAdminPassword: Boolean(process.env.ADMIN_PASSWORD),
         hasWechatQrPath: Boolean(process.env.WECHAT_QR_PATH),
         hasNetlifySiteId: Boolean(process.env.NETLIFY_SITE_ID || process.env.SITE_ID),
-        hasNetlifyBlobsToken: Boolean(process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_AUTH_TOKEN)
+        hasNetlifyBlobsToken: Boolean(process.env.NETLIFY_BLOBS_TOKEN),
+        blobsMode: process.env.NETLIFY_BLOBS_TOKEN ? "manual-token" : "runtime"
       });
     }
 
