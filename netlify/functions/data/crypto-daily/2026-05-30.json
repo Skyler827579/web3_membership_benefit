@@ -1,0 +1,347 @@
+{
+  "date": "2026-05-30",
+  "slug": "2026-05-30-record-stocks-cftc-perps-etf-outflows-bitcoin-confirmation",
+  "title": "新高很热，回流还冷",
+  "hook": "美股继续创纪录，CFTC 批准美国受监管的 Bitcoin perpetual futures，BTC 也重新靠近 7.4 万美元；但 ETF 口径仍是净流出，BTC 和 ETH 主资产还没有给出资金确认。今天的重点不是“风险偏好全面打开”，而是“外部情绪很热、加密资金仍冷”。",
+  "market_one_liner": "截至 2026 年 5 月 30 日运行时，CoinGecko 显示全球加密总市值约 2.569 万亿美元、24 小时增 1.1%，BTC 约 73680 美元、ETH 约 2018 美元；CryptoETF.today 显示 5 月 29 日加密 ETF 总净流量约负 3.411 亿美元，BTC 约负 2.233 亿美元、ETH 约负 1.214 亿美元。",
+  "sharp_angle": "今天最容易误读的是把美股新高、监管开放和 BTC 反弹合并成单边利多；真正的结构是监管预期改善，但机构现货通道仍在流出，价格还缺确认。",
+  "supporting_viewpoints": [
+    "已确认事实：CoinGecko 运行时页面显示全球加密总市值约 2.569 万亿美元，24 小时变化约正 1.1%，24 小时成交量约 889 亿美元，BTC 占比约 57.4%，ETH 占比约 9.48%。",
+    "已确认事实：CoinGecko 显示 BTC 约 73679.63 美元，24 小时约涨 0.8%，7 日约涨 2.3%，市值约 1.476 万亿美元。",
+    "已确认事实：CoinGecko 显示 ETH 约 2018.42 美元，24 小时约涨 1.1%，7 日约涨 2.3%，市值约 2435 亿美元。",
+    "已确认事实：CoinGecko 显示 SOL 约 82.87 美元、XRP 约 1.36 美元、DOGE 约 0.1014 美元，主流币整体修复但幅度不一致。",
+    "已确认事实：CoinGecko 热点列表显示 HYPE 约 65.36 美元、24 小时约涨 8.1%，XLM 约 0.2855 美元、24 小时约涨 44.7%，XMR 约涨 15.0%，HBAR 约涨 12.8%，ZEC 约 537.82 美元。",
+    "已确认事实：CryptoETF.today 标注 Live · May 30, 2026，显示追踪 ETF 总 AUM 约 698 亿美元，5 月 29 日净流量约负 3.411 亿美元，YTD 净流入约负 9.599 亿美元。",
+    "已确认事实：CryptoETF.today 显示 BTC ETF 24 小时净流量约负 2.233 亿美元，ETH 约负 1.214 亿美元，SOL 约正 50 万美元，XRP 约正 140 万美元，HYPE 约正 170 万美元。",
+    "已确认事实：CFTC 5 月 29 日宣布批准 KalshiEX 的 BTCPERP Contract，允许其作为引用比特币现货价格的 perpetual futures contract 上市。",
+    "已确认事实：CFTC 同日发布 Coinbase 相关解释与 no-action position，确认部分 crypto asset perpetuals 可按 foreign futures 分类处理。",
+    "已确认事实：AP 5 月 29 日报道，S&P 500 当日涨 0.2% 至 7580.06，Dow 涨 0.7%，Nasdaq 涨 0.2%，主要指数继续刷新纪录。",
+    "已确认事实：AP 同日报道，欧洲和亚洲市场多数上涨，Brent 原油下跌 1.7%，说明外部风险偏好受停火和科技股情绪支撑。",
+    "已确认事实：RTHK 5 月 29 日报道称恒生指数涨 176 点或 0.7% 至 25182，上海综指跌 0.73% 至 4068，A股港股方向分化。",
+    "已确认事实：美国财政部 5 月 29 日曲线显示 2 年期美债收益率 3.98%，10 年期 4.45%，30 年期 4.99%，10 年和 2 年仍呈正斜率约 47 个基点。",
+    "已确认事实：美国财政部 5 月 29 日 TIPS 曲线显示 5 年期实际收益率约 2.07%，10 年期约 2.49%，长端实际利率仍高。",
+    "已确认事实：BEA 5 月 28 日发布美国 4 月 Personal Income and Outlays，PCE 价格指数环比上涨 0.4%，核心 PCE 环比上涨 0.2%；同比看，PCE 3.8%，核心 PCE 3.3%。",
+    "已确认事实：BEA GDP 二次估计显示一季度实际 GDP 年化增速从初值 2.0% 下修到 1.6%。",
+    "已确认事实：BLS 4 月 CPI 显示 CPI 环比 0.6%、同比 3.8%，核心 CPI 环比 0.4%、同比 2.8%。",
+    "已确认事实：BLS 4 月 PPI 显示最终需求环比上涨 1.4%，同比上涨 6.0%，上游价格压力仍强。",
+    "已确认事实：BLS 4 月就业报告显示非农新增 11.5 万人，失业率维持 4.3%。",
+    "已确认事实：AP 5 月 28 日报道，美国初请失业金升至 21.5 万人，四周均值升至 20.9 万人，但裁员仍处低位。",
+    "已确认事实：S&P Global 5 月 flash PMI 显示美国综合 PMI 为 51.7，制造业 PMI 为 55.3，服务业 PMI 为 50.9。",
+    "已确认事实：U.S. Census Bureau 显示美国 4 月零售和食品服务销售额约 7571 亿美元，环比增长 0.5%，同比增长 4.9%。",
+    "已确认事实：Federal Reserve 4 月 29 日声明和会议材料显示联邦基金目标区间维持 3.50% 至 3.75%，通胀仍高且中东冲突增加不确定性。",
+    "已确认事实：中国国家统计局英文页面显示 4 月制造业 PMI 为 50.3，比 3 月低 0.1 个百分点，仍在扩张区间。",
+    "已确认事实：中国政府网转引国家统计局数据显示，中国 4 月 CPI 同比上涨 1.2%，PPI 同比上涨 2.8%。",
+    "市场解读：CFTC perpetuals 批准提高了美国合规衍生品供给的确定性，但它更偏中长期市场结构，不等于当天现货买盘已经回流。",
+    "个人分析推断：如果 BTC 不能重新站稳 74000 至 75000，并进一步挑战 76000，今天的监管和美股利好更像情绪托底，不像趋势确认。"
+  ],
+  "main_moves": [
+    "BTC 约 73680 美元，重新靠近 7.4 万美元，但仍没有站稳 74000 至 75000 的短线确认区。",
+    "ETH 约 2018 美元，守住 2000 美元整数位，但还没有重新收复 2100 美元。",
+    "全球加密总市值约 2.569 万亿美元，24 小时成交量约 889 亿美元，整体修复温和。",
+    "ETF 资金仍是主要拖累：5 月 29 日总净流出约 3.411 亿美元，BTC 和 ETH 是主要流出来源。",
+    "CFTC 批准 KalshiEX 的 BTCPERP，监管层面释放合规衍生品边际开放信号。",
+    "美股继续创新高，科技股和 AI 主题推动风险偏好，但 A股港股分化说明亚洲传导并不均匀。",
+    "美债长端和实际利率仍高，10 年期名义收益率约 4.45%，10 年期实际收益率约 2.49%，估值压力没有完全解除。"
+  ],
+  "hot_coins": [
+    "HYPE：CoinGecko 显示约 65.36 美元，24 小时约涨 8.1%，CryptoETF.today 显示 HYPE ETF 小额正流入约 170 万美元，是局部强势。",
+    "XLM：CoinGecko 显示约 0.2855 美元，24 小时约涨 44.7%，属于高波动异动，适合讲短线情绪，不适合替代主线。",
+    "XMR：CoinGecko 显示约 413.46 美元，24 小时约涨 15.0%，隐私币板块出现明显轮动。",
+    "HBAR：CoinGecko 显示约 0.1022 美元，24 小时约涨 12.8%，偏事件和轮动资金驱动。",
+    "ZEC/BCH：ZEC 约 537.82 美元、BCH 约 305.49 美元，7 日仍有相对强势，但单日动能不如 XLM、XMR、HBAR。"
+  ],
+  "macro_background": [
+    "上游政策预期：Fed 4 月 29 日维持 3.50% 至 3.75% 区间，会议材料强调通胀仍高和中东不确定性。市场对宽松的定价不能只看 GDP 下修，还要看 PCE、PPI 和能源价格。",
+    "上游美国通胀：4 月 PCE 同比 3.8%、核心 PCE 同比 3.3%，核心月度 0.2% 是缓和点；但 CPI 同比 3.8%、PPI 同比 6.0%，说明通胀链条没有完全降温。",
+    "上游美国增长：一季度 GDP 二读下修至 1.6%，4 月零售销售环比 0.5%，显示经济放缓但消费没有断裂。",
+    "上游就业：4 月非农新增 11.5 万、失业率 4.3%；截至 5 月 23 日当周初请 21.5 万。就业降温但仍稳定，Fed 尚未被迫快速宽松。",
+    "上游 PMI：S&P Global 5 月 flash 综合 PMI 51.7，制造业 55.3，服务业 50.9。制造业偏强、服务业偏弱，解释了美股可以强但宏观并不单边宽松。",
+    "上游中国：4 月制造业 PMI 50.3，CPI 同比 1.2%，PPI 同比 2.8%。价格修复与内需、信用和地产压力并存，不能简单写成亚洲风险偏好全面恢复。",
+    "中间传导一：利率端仍高。5 月 29 日美国财政部曲线显示 2 年期 3.98%、10 年期 4.45%、30 年期 4.99%，资金成本仍限制高波动资产估值。",
+    "中间传导二：实际利率仍是约束。5 年期 TIPS 约 2.07%、10 年期约 2.49%，说明市场虽然交易美股盈利和监管利好，但折现率没有松到舒服区间。",
+    "中间传导三：美元和外汇。DXY 仍在约 99 附近，USD/JPY 仍接近 159 一带，人民币离岸汇率也需要观察；外汇不是单边美元崩盘，而是高利差环境下的缓慢重定价。",
+    "中间传导四：股票和商品。美股创新高、亚洲多数上涨、Brent 回落，改善风险偏好；但黄金白银仍在高位区域，说明市场仍保留防御和通胀对冲。",
+    "中间传导五：ETF 是加密自己的资金口。CryptoETF.today 显示总净流出 3.411 亿美元，BTC 和 ETH 仍为负，监管利好尚未转成现货 ETF 申购。",
+    "下游监管：CFTC 批准 BTCPERP 和 Coinbase 相关解释，改善美国合规衍生品供给，但它主要影响市场结构和交易深度，不直接等于 BTC 现货需求增加。",
+    "下游价格：BTC 靠近 7.4 万美元，ETH 靠近 2000 美元上方。价格止跌修复，但还缺关键位和资金面共同确认。",
+    "下游链上：CoinDesk 转述 CryptoQuant 和 Glassnode 指出长期持币供应高、鲸鱼余额同比收缩、ETF 流入减弱。本文把它作为需求不足的佐证，不把单一链上指标写成绝对方向。"
+  ],
+  "technical_view": [
+    "BTC 第一观察位是 73000 至 73500 美元，守住才说明昨日反弹没有被快速吞回。",
+    "BTC 短线确认区是 74000 至 75000 美元，站稳后才有资格继续看 76000 美元。",
+    "BTC 更强阻力仍在 76000 至 78000 美元，若 ETF 继续流出，这一带容易出现获利盘和被动减仓。",
+    "BTC 若跌回 72000 美元附近，说明美股新高和监管利好没有形成足够托底。",
+    "ETH 的防守位是 2000 美元，修复确认位是 2100 美元，强确认需要重新挑战 2200 美元。",
+    "HYPE、XLM、XMR、HBAR 的强势属于局部风险偏好扩散，但主趋势仍应先看 BTC/ETH 和 ETF 流向。",
+    "技术判断要同时看 10 年期收益率、10 年期实际收益率、ETF 净流量和 CFTC 后续落地节奏，单看 K 线容易误判。"
+  ],
+  "sentiment_view": [
+    "情绪比前一天暖，但不是全面乐观：美股新高和 CFTC 批准提高叙事温度，ETF 流出压低资金确认。",
+    "BTC 占比约 57.4%，说明资金仍集中在主资产，山寨币虽然异动但没有全面扩散。",
+    "ETH 只是在 2000 美元上方修复，距离 2100 和 2200 仍有确认距离。",
+    "XLM、XMR、HBAR 的大涨说明短线交易愿意承担风险，但这类高波动轮动容易快进快出。",
+    "市场表达上应使用“监管利好”“资金仍分化”“等待确认”，避免“ETF 回流”“牛市确认”“山寨季全面开启”。",
+    "如果后续 BTC ETF 净流出收窄，同时 BTC 站稳 75000，情绪才更容易从修复切换成趋势讨论。"
+  ],
+  "reasons": [
+    "上游/Fed/已确认事实：4 月 FOMC 维持 3.50% 至 3.75%，通胀仍高和中东不确定性仍是政策约束。",
+    "上游/通胀/已确认事实：4 月 PCE 同比 3.8%、核心 PCE 同比 3.3%，核心月度放缓但同比仍高。",
+    "上游/PPI/已确认事实：4 月 PPI 最终需求同比 6.0%、环比 1.4%，说明企业成本端压力没有消失。",
+    "上游/增长/已确认事实：一季度 GDP 二读下修到 1.6%，缓和利率压力，但不是衰退确认。",
+    "上游/就业/已确认事实：非农 11.5 万、失业率 4.3%、初请 21.5 万，劳动力市场放缓但仍稳定。",
+    "上游/中国/已确认事实：中国制造业 PMI 50.3、CPI 1.2%、PPI 2.8%，亚洲风险偏好有支撑但不均匀。",
+    "中间/利率/已确认事实：2 年期美债 3.98%、10 年期 4.45%、10 年期 TIPS 2.49%，资金成本仍高。",
+    "中间/美股/已确认事实：S&P 500、Dow、Nasdaq 继续创高，科技股和 AI 主题支持风险资产情绪。",
+    "中间/亚洲/已确认事实：恒生上涨、上证下跌，亚洲市场不是单边强。",
+    "中间/ETF/已确认事实：加密 ETF 总净流出约 3.411 亿美元，BTC 和 ETH 是主要流出来源。",
+    "下游/监管/已确认事实：CFTC 批准 KalshiEX BTCPERP，是美国合规加密衍生品的重要增量。",
+    "下游/链上/市场解读：公开报道提到长期持币供应高但新买盘不足、鲸鱼余额收缩，这与 ETF 流出共同指向需求确认不足。",
+    "下游/个人分析推断：监管利好提高中长期市场深度预期，但短线仍需 ETF 和价格关键位来确认。"
+  ],
+  "risk_notes": [
+    "本文仅作市场信息梳理和中文内容素材，不构成投资建议，不承诺任何资产涨跌。",
+    "本文处理日期为 2026 年 5 月 30 日，价格、ETF 流量、收益率和外汇数据均可能在运行后变化。",
+    "CoinGecko 和 CryptoETF.today 为运行时页面，全球市值、币价、AUM 和流量会持续更新。",
+    "CryptoETF.today 的 ETF 流量为站点追踪口径，应与发行商、交易所和后续 T+1 数据交叉核验。",
+    "CFTC 的 BTCPERP 批准是监管事件，不等于所有 crypto perpetuals 自动获得同等许可。",
+    "美国财政部收益率和 TIPS 数据为官方曲线口径，不等同于实时盘中价格。",
+    "BEA、BLS、DOL、Fed、NBS、PBOC 等官方数据可能在后续发布中修订。",
+    "美股创新高来自科技股和盈利预期，不能自动映射为 BTC、ETH 现货需求。",
+    "XLM、XMR、HBAR、HYPE 等热点币波动较高，短线涨幅不代表主趋势确认。",
+    "链上指标来自第三方数据与媒体转述，适合作为辅助观察，不应单独作为结论来源。"
+  ],
+  "oral_suitability": "适合 3-5 分钟中文口播：开场用“新高很热，回流还冷”切入，先报 BTC/ETH、ETF 和 CFTC 监管事件，再分上游政策与宏观、中间利率和跨资产、下游价格和技术位，最后强调不做投资建议。",
+  "core_data": [
+    "CoinGecko：全球加密总市值约 2.569 万亿美元，24 小时约增 1.1%，24 小时成交量约 889 亿美元，BTC 占比约 57.4%，ETH 占比约 9.48%。",
+    "CoinGecko：BTC 约 73679.63 美元，24 小时约涨 0.8%，7 日约涨 2.3%，市值约 1.476 万亿美元。",
+    "CoinGecko：ETH 约 2018.42 美元，24 小时约涨 1.1%，7 日约涨 2.3%，市值约 2435 亿美元。",
+    "CoinGecko：SOL 约 82.87 美元，XRP 约 1.36 美元，DOGE 约 0.1014 美元，HYPE 约 65.36 美元，ZEC 约 537.82 美元。",
+    "CoinGecko：XLM 24 小时约涨 44.7%，XMR 约涨 15.0%，HBAR 约涨 12.8%，HYPE 约涨 8.1%。",
+    "CryptoETF.today：Live · May 30, 2026，总 AUM 约 698 亿美元，5 月 29 日净流量约负 3.411 亿美元，YTD 净流入约负 9.599 亿美元。",
+    "CryptoETF.today：BTC ETF 24 小时净流量约负 2.233 亿美元，ETH 约负 1.214 亿美元，SOL 约正 50 万美元，XRP 约正 140 万美元，HYPE 约正 170 万美元。",
+    "CFTC：5 月 29 日批准 KalshiEX LLC 的 BTCPERP Contract，允许其作为引用 bitcoin spot price 的 perpetual futures contract 上市。",
+    "CFTC：同日发布 Coinbase 相关解释和 no-action position，涉及部分 crypto asset perpetuals 的 foreign futures 分类。",
+    "AP：5 月 29 日 S&P 500 涨 0.2% 至 7580.06，Dow 涨 0.7% 至 51032.46，Nasdaq 涨 0.2% 至 26972.62。",
+    "RTHK：恒生指数 5 月 29 日涨 0.7% 至 25182，上证综指跌 0.73% 至 4068。",
+    "U.S. Treasury：5 月 29 日 2 年期 3.98%，10 年期 4.45%，30 年期 4.99%。",
+    "U.S. Treasury：5 月 29 日 TIPS 曲线 5 年期 2.07%，10 年期 2.49%，30 年期 2.71%。",
+    "BEA：美国 4 月个人收入环比基本持平，DPI 环比下降 0.1%，PCE 支出环比增加 0.5%，实际 PCE 环比增加 0.1%。",
+    "BEA：美国 4 月 PCE 价格指数环比 0.4%，核心 PCE 环比 0.2%；PCE 同比 3.8%，核心 PCE 同比 3.3%。",
+    "BEA：美国一季度实际 GDP 二读年化增长 1.6%，低于初值 2.0%。",
+    "BLS：美国 4 月 CPI 环比 0.6%、同比 3.8%，核心 CPI 环比 0.4%、同比 2.8%。",
+    "BLS：美国 4 月 PPI 最终需求环比 1.4%，同比 6.0%。",
+    "BLS：美国 4 月非农新增 11.5 万人，失业率 4.3%。",
+    "AP/DOL：截至 2026 年 5 月 23 日当周初请失业金 21.5 万人，四周均值 20.9 万人。",
+    "S&P Global：美国 5 月 flash 综合 PMI 为 51.7，服务业 PMI 为 50.9，制造业 PMI 为 55.3。",
+    "U.S. Census Bureau：美国 4 月零售和食品服务销售额约 7571 亿美元，环比 0.5%，同比 4.9%。",
+    "Federal Reserve：4 月 29 日 FOMC 维持 3.50% 至 3.75%，会议材料称通胀仍高且中东冲突增加不确定性。",
+    "国家统计局：中国 4 月制造业 PMI 为 50.3。",
+    "中国政府网/国家统计局：中国 4 月 CPI 同比 1.2%，PPI 同比 2.8%。"
+  ],
+  "talking_points": [
+    "开场：今天不是冷清行情，而是外部很热、加密资金还冷。",
+    "报行情：BTC 约 73680 美元，ETH 约 2018 美元，全球加密市值约 2.569 万亿美元。",
+    "讲 ETF：总净流出约 3.411 亿美元，BTC 约负 2.233 亿，ETH 约负 1.214 亿。",
+    "讲监管：CFTC 批准 KalshiEX 的 BTCPERP，美国合规 perpetuals 迈出关键一步。",
+    "讲区别：监管利好改善市场结构，但不等于现货 ETF 当天回流。",
+    "讲宏观：PCE 核心月度缓和，PPI 和 headline 通胀仍高，GDP 下修但就业稳定。",
+    "讲利率：2 年期约 3.98%，10 年期约 4.45%，10 年期实际利率约 2.49%。",
+    "讲跨资产：美股创新高，恒生上涨，上证下跌，亚洲传导分化。",
+    "讲技术位：BTC 看 73000 防守、74000 至 75000 确认、76000 至 78000 强阻力。",
+    "讲热点：HYPE、XLM、XMR、HBAR 是局部情绪，不是全面山寨季确认。",
+    "结尾：关键词是监管升温、ETF降温、价格等确认。"
+  ],
+  "takeaways": [
+    "CFTC 批准 BTCPERP 是今天最明确的监管增量。",
+    "ETF 资金仍未配合，BTC 和 ETH 现货通道继续净流出。",
+    "BTC 靠近 7.4 万美元，但仍需要站稳 74000 至 75000。",
+    "ETH 守住 2000 美元，但 2100 才是更清晰的修复确认。",
+    "美股创新高改善情绪，却不能替代加密自己的资金确认。",
+    "长端名义利率和实际利率仍高，估值约束没有消失。",
+    "热点币异动说明交易活跃，但主线仍看 BTC/ETH、ETF 和监管落地。"
+  ],
+  "summary_framework": [
+    "核心结论：新高很热，回流还冷。",
+    "一针见血：CFTC 给了叙事，ETF 还没给钱。",
+    "上游层：Fed 维持利率、PCE/GDP、CPI/PPI、就业、美国 PMI、中国 PMI 和价格数据。",
+    "中间层：美债名义利率、TIPS 实际利率、美股新高、亚洲分化、美元和商品。",
+    "下游层：CFTC BTCPERP 批准、ETF 净流出、BTC 73000 防守和 74000 至 75000 确认。",
+    "风险纪律：不把监管开放写成现货买盘，不把美股新高写成加密趋势确认。"
+  ],
+  "avoid_angles": [
+    "不要说 CFTC 批准等于所有 crypto perpetuals 全面放行，当前是具体合约和特定解释。",
+    "不要把美股创新高直接写成 BTC 牛市确认，ETF 流量仍为负。",
+    "不要把 SOL、XRP、HYPE 的小额正流入写成全市场机构回流。",
+    "不要把 XLM、XMR、HBAR 的短线涨幅写成山寨季全面开启。",
+    "不要说 PCE 证明 Fed 马上降息，PPI、CPI 和实际利率仍是约束。",
+    "不要把 GDP 下修直接说成美国衰退，零售和就业仍显示韧性。",
+    "不要把中国 PMI 50.3 简单写成亚洲全面利好，A股港股本身分化。",
+    "不要使用旧分类名“宏观驱动”“技术分析”“市场情绪”。",
+    "不要承诺涨跌或给出买卖建议。"
+  ],
+  "script": "大家好，今天这期的标题可以直接说：新高很热，回流还冷。\n\n为什么这么讲？因为今天市场表面上有三个很热的信号。第一，美股继续创纪录。AP 5 月 29 日报道，S&P 500 当天上涨 0.2%，收在 7580.06；Dow 上涨 0.7%，Nasdaq 上涨 0.2%，主要指数继续刷新高位。第二，监管上出现一个明确增量。CFTC 5 月 29 日宣布批准 KalshiEX 的 BTCPERP Contract，也就是引用比特币现货价格的 perpetual futures contract。第三，BTC 自己也修复了，CoinGecko 运行时页面显示，BTC 约 73680 美元，ETH 约 2018 美元，全球加密总市值约 2.569 万亿美元，24 小时上涨约 1.1%。\n\n如果只看这些，很容易得出一个很顺的结论：风险偏好回来了，监管也放松了，加密要全面反转了。但今天恰恰不能这么讲。因为最关键的机构现货通道，还是没有配合。\n\nCryptoETF.today 标注 Live · May 30, 2026，显示追踪的加密 ETF 总 AUM 约 698 亿美元。5 月 29 日的总净流量约负 3.411 亿美元，年初至今净流入约负 9.599 亿美元。其中 BTC ETF 24 小时净流量约负 2.233 亿美元，ETH 约负 1.214 亿美元。SOL、XRP、HYPE 有小额正流入，分别约正 50 万、140 万和 170 万美元，但这个体量无法抵消 BTC 和 ETH 的主资产流出。\n\n所以今天的核心不是“没有利好”，而是“利好还没有变成现货资金回流”。CFTC 批准 BTCPERP 很重要，它说明美国合规加密衍生品市场正在打开新的口子。CFTC 同日还发布了 Coinbase 相关解释和 no-action position，确认部分 crypto asset perpetuals 可以按 foreign futures 分类处理。这个方向会改善美国本土合规交易深度，也会改变一些交易所、做市商和机构的产品布局。但它更像市场结构利好，不等于今天 BTC 现货 ETF 已经开始大规模申购。\n\n宏观上也一样，不能只看一边。先看上游政策预期。Federal Reserve 4 月 29 日会议维持联邦基金目标区间在 3.50% 到 3.75%。会议材料和新闻发布会都强调，通胀仍高，中东冲突增加了不确定性。换句话说，Fed 不是在一个非常舒服的低通胀环境里观察市场，而是在增长放缓、能源和通胀压力还在的组合里做选择。\n\n美国 4 月 PCE 数据已经公布。BEA 显示，4 月 PCE 价格指数环比上涨 0.4%，核心 PCE 环比上涨 0.2%；同比看，PCE 上涨 3.8%，核心 PCE 上涨 3.3%。核心月度 0.2%确实比市场最担心的情况温和一点，这是利率短线松一口气的原因。但同一套数据里，headline 同比仍高，核心同比也明显高于 2%。再看 BLS 数据，4 月 CPI 同比 3.8%，PPI 最终需求同比 6.0%、环比 1.4%。这说明通胀链条没有完全断掉，企业成本端压力仍然明显。\n\n增长端也有分裂。BEA 的一季度 GDP 二次估计，把实际 GDP 年化增速从初值 2.0%下修到 1.6%。这会让市场愿意交易增长放缓、利率压力缓和。但 U.S. Census Bureau 显示，美国 4 月零售和食品服务销售额约 7571 亿美元，环比增长 0.5%，同比增长 4.9%。BLS 4 月就业报告显示，非农新增 11.5 万人，失业率维持 4.3%。AP 转述美国劳工部数据称，截至 5 月 23 日当周初请失业金升至 21.5 万人，四周均值 20.9 万人，但裁员仍处低位。也就是说，美国经济不是直接崩，而是增长降温、价格仍高、就业还稳。\n\nPMI 也支持这个判断。S&P Global 5 月 flash PMI 显示，美国综合 PMI 是 51.7，制造业 PMI 是 55.3，服务业 PMI 是 50.9。制造业偏强，服务业偏弱，整体仍在扩张线以上。这也是为什么美股可以继续创高，尤其科技股和 AI 主题还能很强，但 Fed 又不能轻松宣布通胀问题结束。\n\n再看中间传导，也就是资金成本。美国财政部 5 月 29 日曲线显示，2 年期美债收益率是 3.98%，10 年期是 4.45%，30 年期是 4.99%。实际利率也不低，5 年期 TIPS 约 2.07%，10 年期约 2.49%，30 年期约 2.71%。对 BTC、黄金、科技股和所有高波动资产来说，高实际利率就是估值上方的天花板。它不一定马上把价格打下来，但会让每一次反弹都需要资金面确认。\n\n跨资产情绪确实改善。AP 提到欧洲和亚洲市场多数上涨，Brent 原油下跌 1.7%。RTHK 报道，恒生指数 5 月 29 日上涨 0.7%，收在 25182；但同一天上海综指下跌 0.73%，收在 4068。这个组合很关键：美股和港股科技情绪更强，A股相对偏弱，亚洲传导并不均匀。所以不能把“全球风险偏好”写成单边利多。\n\n中国宏观也需要这样看。中国国家统计局英文页面显示，4 月制造业 PMI 为 50.3，比 3 月低 0.1 个百分点，但仍在扩张区间。中国政府网转引国家统计局数据称，4 月 CPI 同比上涨 1.2%，PPI 同比上涨 2.8%。价格有修复，制造业也还在 50 上方，但这并不自动等于内需、地产、信用和 A股港股全部共振。对加密来说，中国数据主要是跨资产背景，不是 BTC 或 ETH 的直接方向盘。\n\n回到下游价格。BTC 现在第一道防守区是 73000 到 73500 美元。守住这一区间，说明美股新高、监管利好和短线风险偏好还有托底作用。上方第一确认区是 74000 到 75000 美元，只有重新站稳，市场才会更愿意讨论 76000 美元。更强阻力仍在 76000 到 78000 美元。如果 ETF 继续净流出，BTC 反弹到这一带仍可能遇到减仓盘。\n\nETH 的逻辑更简单。2000 美元是防守位，2100 美元是修复确认位，2200 美元才是更强的风险偏好扩散。如果 ETH 只是在 2000 美元上方横着，那山寨币就很难说已经全面进入强趋势。\n\n今天热点币不少。CoinGecko 显示，HYPE 约 65.36 美元，24 小时涨约 8.1%；XLM 约 0.2855 美元，24 小时涨约 44.7%；XMR 涨约 15.0%，HBAR 涨约 12.8%。这些都说明短线交易情绪并不差。但热点币强，不等于主线确认。它们更像温度计，说明有人愿意做轮动；真正的方向盘，还是 BTC、ETH、ETF 资金和利率。\n\n链上层面，今天不适合夸大单一指标。CoinDesk 转述 CryptoQuant 和 Glassnode 的观察提到，长期持币供应处在高位，但这可能反映市场换手不足；鲸鱼余额同比收缩，ETF 流入也不如前期强。这个信息和 ETF 净流出是互相印证的：市场不是完全没有持币信心，而是新买盘还不够强。\n\n最后总结一下。今天上游是 Fed 仍受通胀约束，PCE 核心月度缓和但 CPI、PPI 和实际利率仍高；中间是美股创新高、亚洲分化、利率成本仍高；下游是 CFTC 给了监管叙事，但 ETF 还在净流出，BTC 和 ETH 还没有站上关键确认位。\n\n所以今天的关键词是：监管升温、ETF 降温、价格等确认。接下来最重要的三件事：第一，BTC 能不能守住 73000 到 73500，并站稳 74000 到 75000；第二，BTC 和 ETH ETF 净流出能不能明显收敛；第三，10 年期实际利率能不能从高位回落。本文只做市场信息梳理，不构成投资建议，也不承诺任何资产涨跌。",
+  "short_script": "大家好，今天的主线是：新高很热，回流还冷。\n\n美股继续创纪录，AP 报道 5 月 29 日 S&P 500、Dow 和 Nasdaq 都继续走高。加密这边也有监管利好：CFTC 批准 KalshiEX 的 BTCPERP，也就是美国受监管的比特币 perpetual futures。CoinGecko 显示，BTC 约 73680 美元，ETH 约 2018 美元，全球加密总市值约 2.569 万亿美元。\n\n但问题在 ETF。CryptoETF.today 显示，5 月 29 日加密 ETF 总净流出约 3.411 亿美元，其中 BTC 约负 2.233 亿美元，ETH 约负 1.214 亿美元。SOL、XRP、HYPE 有小额正流入，但抵不过主资产流出。\n\n所以今天不能把监管利好和美股新高直接说成加密牛市确认。宏观上，美国 PCE 核心月度缓和，但 CPI、PPI 和实际利率仍高；5 月 29 日 10 年期美债约 4.45%，10 年期 TIPS 约 2.49%。\n\n接下来就看三件事：BTC 能不能守住 73000 到 73500，并站稳 74000 到 75000；ETH 能不能收复 2100；ETF 流出能不能收敛。这不是投资建议。今天的关键词是监管升温、ETF 降温、等待确认。",
+  "video_titles": [
+    "新高未回流",
+    "CFTC开门",
+    "ETF还冷",
+    "七万五确认",
+    "别急牛市"
+  ],
+  "categories": [
+    "每日行情",
+    "宏观",
+    "经济指标",
+    "美股",
+    "亚洲市场",
+    "A股港股",
+    "债市",
+    "外汇市场",
+    "黄金白银",
+    "主流加密货币",
+    "热币异动",
+    "监管/ETF",
+    "市场技术分析",
+    "情绪分析",
+    "链上数据"
+  ],
+  "tags": [
+    "BTC",
+    "ETH",
+    "HYPE",
+    "XLM",
+    "XMR",
+    "HBAR",
+    "CFTC",
+    "BTCPERP",
+    "ETF",
+    "PCE",
+    "PPI",
+    "美债收益率",
+    "实际利率",
+    "美股新高",
+    "中国PMI"
+  ],
+  "sources": [
+    {
+      "title": "Cryptocurrency Prices by Market Cap",
+      "url": "https://www.coingecko.com/",
+      "publisher": "CoinGecko",
+      "note": "用于核对全球加密总市值、BTC/ETH/SOL/XRP/HYPE/XLM/XMR/HBAR/ZEC 等运行时价格、成交量和涨跌幅。"
+    },
+    {
+      "title": "Crypto ETF - Real-time Bitcoin, Ethereum, Solana, XRP & Hyperliquid ETF Flows",
+      "url": "https://cryptoetf.today/en",
+      "publisher": "CryptoETF.today",
+      "note": "用于核对 2026 年 5 月 29 日加密 ETF AUM、总净流量和 BTC/ETH/SOL/XRP/HYPE 分项净流量。"
+    },
+    {
+      "title": "CFTC Approves BTCPERP Contract Submitted by KalshiEX, LLC",
+      "url": "https://www.cftc.gov/PressRoom/PressReleases/9240-26",
+      "publisher": "CFTC",
+      "note": "用于核对 KalshiEX BTCPERP 批准和美国受监管 bitcoin perpetual futures 事件。"
+    },
+    {
+      "title": "Commission Staff Confirms the Categorization of Certain Crypto Asset Perpetuals as Foreign Futures",
+      "url": "https://www.cftc.gov/PressRoom/PressReleases/9241-26",
+      "publisher": "CFTC",
+      "note": "用于核对 Coinbase 相关解释与 no-action position。"
+    },
+    {
+      "title": "How major US stock indexes fared Friday 5/29/2026",
+      "url": "https://apnews.com/article/82c0b13a9b0bec79cc907cc122cac328",
+      "publisher": "AP",
+      "note": "用于核对 S&P 500、Dow、Nasdaq、Russell 2000 和 Brent 原油日内表现。"
+    },
+    {
+      "title": "HK stocks advance as Nikkei and Kospi hit highs",
+      "url": "https://news.rthk.hk/rthk/en/component/k2/1856514-20260529.htm",
+      "publisher": "RTHK",
+      "note": "用于核对 5 月 29 日恒生指数、上海综指及亚洲市场背景。"
+    },
+    {
+      "title": "Daily Treasury Par Yield Curve Rates",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve",
+      "publisher": "U.S. Department of the Treasury",
+      "note": "用于核对 2026 年 5 月 29 日 2 年期、10 年期和 30 年期美债收益率。"
+    },
+    {
+      "title": "Daily Treasury Par Real Yield Curve Rates",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_real_yield_curve",
+      "publisher": "U.S. Department of the Treasury",
+      "note": "用于核对 2026 年 5 月 29 日 TIPS 实际收益率。"
+    },
+    {
+      "title": "Personal Income and Outlays, April 2026",
+      "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-april-2026",
+      "publisher": "Bureau of Economic Analysis",
+      "note": "用于核对美国 4 月 PCE、核心 PCE、个人收入、消费和储蓄率。"
+    },
+    {
+      "title": "Gross Domestic Product",
+      "url": "https://www.bea.gov/data/gdp/gross-domestic-product",
+      "publisher": "Bureau of Economic Analysis",
+      "note": "用于核对美国一季度 GDP 二次估计从 2.0% 下修至 1.6%。"
+    },
+    {
+      "title": "Consumer Price Index News Release - 2026 M04 Results",
+      "url": "https://www.bls.gov/news.release/archives/cpi_05122026.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "note": "用于核对美国 4 月 CPI 和核心 CPI。"
+    },
+    {
+      "title": "Producer Price Index News Release - 2026 M04 Results",
+      "url": "https://www.bls.gov/news.release/archives/ppi_05132026.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "note": "用于核对美国 4 月 PPI 最终需求数据。"
+    },
+    {
+      "title": "Employment Situation News Release - 2026 M04 Results",
+      "url": "https://www.bls.gov/news.release/archives/empsit_05082026.htm",
+      "publisher": "Bureau of Labor Statistics",
+      "note": "用于核对美国 4 月非农就业和失业率。"
+    },
+    {
+      "title": "US jobless claims rise to 215,000 but layoffs remain low despite Iran war uncertainty",
+      "url": "https://apnews.com/article/78fed70d4d8f4a8fab7ae4c193a2c858",
+      "publisher": "AP",
+      "note": "用于核对截至 2026 年 5 月 23 日当周美国初请失业金和四周均值。"
+    },
+    {
+      "title": "S&P Global Flash US PMI",
+      "url": "https://www.pmi.spglobal.com/Public/Home/PressRelease/d7a15ea4f43c4e3493db3814db67ad99",
+      "publisher": "S&P Global",
+      "note": "用于核对美国 5 月 flash 综合、制造业和服务业 PMI。"
+    },
+    {
+      "title": "Monthly Retail Trade - Sales Report",
+      "url": "https://www.census.gov/retail/sales.html",
+      "publisher": "U.S. Census Bureau",
+      "note": "用于核对美国 4 月零售和食品服务销售额。"
+    },
+    {
+      "title": "Federal Reserve issues FOMC statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm",
+      "publisher": "Federal Reserve",
+      "note": "用于核对 2026 年 4 月 FOMC 利率决定和政策背景。"
+    },
+    {
+      "title": "Purchasing Managers’ Index for April 2026",
+      "url": "https://www.stats.gov.cn/english/PressRelease/202605/t20260506_1963595.html",
+      "publisher": "National Bureau of Statistics of China",
+      "note": "用于核对中国 4 月制造业 PMI。"
+    },
+    {
+      "title": "China's PPI up 2.8 pct in April",
+      "url": "https://english.www.gov.cn/archive/statistics/202605/11/content_WS6a013e4fc6d00ca5f9a0adf1.html",
+      "publisher": "The State Council of the People's Republic of China",
+      "note": "用于核对中国 4 月 CPI 和 PPI。"
+    },
+    {
+      "title": "Bitcoin's record holder supply hides a buyer drought, CryptoQuant says",
+      "url": "https://www.coindesk.com/markets/2026/05/29/bitcoin-s-record-holder-supply-hides-a-buyer-drought-cryptoquant-says",
+      "publisher": "CoinDesk",
+      "note": "用于辅助核对 BTC 链上需求、长期持币供应、鲸鱼余额和 ETF 资金解读。"
+    }
+  ]
+}
