@@ -10,10 +10,13 @@ function todayKey() {
 
 function sourceFilesThroughToday() {
   const key = todayKey();
-  const today = path.join(sourceDir, `${key}.json`);
-  if (!fs.existsSync(today)) throw new Error(`没有找到今日 Crypto Daily 文章：${today}`);
+  const todaysFiles = fs.readdirSync(sourceDir)
+    .filter(file => file.startsWith(`${key}`) && file.endsWith(".json"))
+    .sort();
+  if (!todaysFiles.length) throw new Error(`没有找到今日 Crypto Daily 文章：${sourceDir}/${key}*.json`);
+
   return fs.readdirSync(sourceDir)
-    .filter(file => /^\d{4}-\d{2}-\d{2}\.json$/.test(file) && file.slice(0, 10) <= key)
+    .filter(file => /^\d{4}-\d{2}-\d{2}(?:-.+)?\.json$/.test(file) && file.slice(0, 10) <= key)
     .sort();
 }
 
