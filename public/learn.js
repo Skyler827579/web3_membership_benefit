@@ -29,7 +29,7 @@ async function main() {
     const res = await fetch(`/api/content/learning?token=${encodeURIComponent(token)}`);
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || "学习内容加载失败");
-    msg.textContent = `${data.pageCount} 页学习资料，已按原版页面格式展示。`;
+    msg.textContent = data.updateNotice || `资料已更新：${data.pageCount} 页学习资料，已按原版页面格式展示。`;
     root.innerHTML = data.pages.map(page => `
       <article class="rendered-page">
         <canvas data-page="${page.page}" aria-label="第 ${page.page} 页"></canvas>

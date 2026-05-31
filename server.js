@@ -250,7 +250,7 @@ async function handleApi(req, res) {
       title: "ChainPulse 社群资源",
       items: [
         { title: "每日文章更新", text: "围绕主流资产行情、链上数据、Web3 赛道和风险提示进行持续更新。" },
-        { title: "基础学习资料", text: "64页学习内容已网页化，按模块拆成章节，适合随时复习。" },
+        { title: "基础学习资料", text: "资料已更新为93页深度完整版，已按原版页面格式网页化展示，适合随时复习。" },
         { title: "上海 Web3 社群资源", text: "用于连接线下活动、行业交流、项目方资源和学习伙伴。" }
       ],
       qr: "/assets/community-wechat.jpeg",
