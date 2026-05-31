@@ -48,9 +48,6 @@ function binary(statusCode, body, contentType) {
 }
 
 function dbStore() {
-  const siteID = process.env.NETLIFY_SITE_ID || process.env.SITE_ID;
-  const token = process.env.NETLIFY_AUTH_TOKEN || process.env.NETLIFY_TOKEN;
-  if (siteID && token) return getStore({ name: "chainpulse-db", siteID, token });
   return getStore("chainpulse-db");
 }
 
@@ -325,9 +322,7 @@ export async function handler(event) {
       return json(200, {
         ok: true,
         hasAdminPassword: Boolean(process.env.ADMIN_PASSWORD),
-        hasWechatQrPath: Boolean(process.env.WECHAT_QR_PATH),
-        hasNetlifySiteId: Boolean(process.env.NETLIFY_SITE_ID || process.env.SITE_ID),
-        hasNetlifyAuthToken: Boolean(process.env.NETLIFY_AUTH_TOKEN || process.env.NETLIFY_TOKEN)
+        hasWechatQrPath: Boolean(process.env.WECHAT_QR_PATH)
       });
     }
 
