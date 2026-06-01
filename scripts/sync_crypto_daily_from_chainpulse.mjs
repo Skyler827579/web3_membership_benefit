@@ -10,11 +10,16 @@ function todayKey() {
 
 function sourceFilesThroughToday() {
   const key = todayKey();
-  const today = path.join(sourceDir, `${key}.json`);
-  if (!fs.existsSync(today)) throw new Error(`没有找到今日 Crypto Daily 加密文章：${today}`);
+  const availableDates = fs.readdirSync(sourceDir)
+    .map(file => file.match(/^(\d{4}-\d{2}-\d{2})(?:-.+)?\.json$/)?.[1])
+    .filter(Boolean)
+    .filter(date => date <= key)
+    .sort();
+  const latestDate = availableDates.at(-1);
+  if (!latestDate) throw new Error(`没有找到截至今日的 Crypto Daily 文章：${sourceDir}`);
 
   return fs.readdirSync(sourceDir)
-    .filter(file => /^\d{4}-\d{2}-\d{2}\.json$/.test(file) && file.slice(0, 10) <= key)
+    .filter(file => /^\d{4}-\d{2}-\d{2}(?:-.+)?\.json$/.test(file) && file.slice(0, 10) <= latestDate)
     .sort();
 }
 

@@ -170,7 +170,7 @@ function transformCryptoDaily(raw) {
     ...blocks("总结框架", raw.summary_framework)
   ];
   return {
-    id: `crypto-daily-${raw.date || raw.slug || safeToken(4)}`,
+    id: `crypto-daily-${raw.slug || raw.date || safeToken(4)}`,
     date: raw.date,
     title: cleanArticleText(raw.title || "ChainPulse Daily 市场观察"),
     summary: cleanArticleText(raw.market_one_liner || raw.hook || ""),
