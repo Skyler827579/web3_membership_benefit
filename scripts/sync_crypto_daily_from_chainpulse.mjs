@@ -11,7 +11,7 @@ function todayKey() {
 function sourceFilesThroughToday() {
   const key = todayKey();
   const availableDates = fs.readdirSync(sourceDir)
-    .map(file => file.match(/^(\d{4}-\d{2}-\d{2})(?:-.+)?\.json$/)?.[1])
+    .map(file => file.match(/^(\d{4}-\d{2}-\d{2})\.json$/)?.[1])
     .filter(Boolean)
     .filter(date => date <= key)
     .sort();
@@ -19,11 +19,18 @@ function sourceFilesThroughToday() {
   if (!latestDate) throw new Error(`没有找到截至今日的 Crypto Daily 文章：${sourceDir}`);
 
   return fs.readdirSync(sourceDir)
-    .filter(file => /^\d{4}-\d{2}-\d{2}(?:-.+)?\.json$/.test(file) && file.slice(0, 10) <= latestDate)
+    .filter(file => /^\d{4}-\d{2}-\d{2}\.json$/.test(file) && file.slice(0, 10) <= latestDate)
     .sort();
 }
 
 fs.mkdirSync(targetDir, { recursive: true });
+for (const file of fs.readdirSync(targetDir)) {
+  if (/^\d{4}-\d{2}-\d{2}-.+\.json$/.test(file)) {
+    fs.unlinkSync(path.join(targetDir, file));
+    console.log(`Removed non-crypto daily article ${path.join(targetDir, file)}`);
+  }
+}
+
 for (const file of sourceFilesThroughToday()) {
   const source = path.join(sourceDir, file);
   const target = path.join(targetDir, file);
