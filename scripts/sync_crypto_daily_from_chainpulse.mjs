@@ -1,7 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 
-const sourceDir = "/Users/skylerlan/Documents/Codex/2026-05-17/chainpulse-2/content/crypto-daily";
+const sourceDir = process.env.CRYPTO_DAILY_SOURCE_DIR
+  || "/Users/skylerlan/Documents/Codex/2026-05-17/chainpulse-2/content/crypto-daily";
 const targetDir = path.join(process.cwd(), "netlify", "functions", "data", "crypto-daily");
 
 function todayKey() {
